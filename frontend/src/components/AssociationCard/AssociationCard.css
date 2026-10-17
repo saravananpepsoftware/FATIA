@@ -1,0 +1,67 @@
+.association-card {
+  background-color: var(--color-white);
+  border: none;
+  border-radius: 18px;
+  padding: 28px 24px;
+  min-height: 310px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  position: relative;
+  overflow: hidden;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.association-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background-color: var(--color-soft-gold);
+  opacity: 0.85;
+}
+
+.association-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.14);
+}
+
+.association-card-top {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.association-card-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--color-soft-gold);
+  background-color: var(--color-soft-gold-light);
+  padding: 3px 10px;
+  border-radius: 12px;
+  display: inline-block;
+  margin-bottom: 6px;
+}
+
+.association-card-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-charcoal);
+  line-height: 1.4;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 600px) {
+  .association-card {
+    padding: 20px 16px;
+    min-height: auto;
+  }
+}

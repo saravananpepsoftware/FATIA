@@ -1,0 +1,15 @@
+{
+  "short_name": "FATIA",
+  "name": "FATIA - Federation of All Trade & Industry Associations of Erode District",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "192x192 512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#B08D57",
+  "background_color": "#F8F6F2"
+}

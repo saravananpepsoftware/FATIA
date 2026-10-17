@@ -1,0 +1,33 @@
+.board-section-root {
+  margin-bottom: 48px;
+}
+
+.board-section-heading {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--color-charcoal);
+  margin-bottom: 22px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.board-section-heading::after {
+  content: '';
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-light-beige) 0%, transparent 100%);
+}
+
+.board-section-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 24px;
+}
+
+@media (max-width: 768px) {
+  .board-section-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 16px;
+  }
+}

@@ -1,0 +1,129 @@
+.board-member-card {
+  background-color: var(--color-white);
+  border: none;
+  border-radius: 18px;
+  padding: 24px 12px;
+  min-height: 270px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  position: relative;
+}
+
+.board-member-card.highlight {
+  border: none;
+  background: #FFFFFF;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.15);
+}
+
+.board-member-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.22);
+}
+
+.board-member-photo-frame {
+  width: 140px;
+  height: 140px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+  margin-bottom: 14px;
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.board-member-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.board-member-mock-avatar {
+  width: 100%;
+  height: 100%;
+  background: var(--color-soft-gold-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+}
+
+.board-member-name-tamil {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #B71C1C;
+  line-height: 1.35;
+  margin-bottom: 4px;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+.board-member-position-tamil {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #0D47A1;
+  margin-bottom: 8px;
+}
+
+.board-member-phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #0D47A1;
+  text-decoration: none;
+  background-color: #E3F2FD;
+  padding: 4px 12px;
+  border-radius: 14px;
+  margin-top: 4px;
+  transition: all var(--transition-fast);
+}
+
+.board-member-phone:hover {
+  background-color: var(--color-soft-gold);
+  color: var(--color-white);
+}
+
+.board-phone-icon {
+  width: 12px;
+  height: 12px;
+}
+
+/* Card layout when no image frame is displayed (text-only honourary cards) */
+.board-member-card.no-image-card {
+  min-height: 110px;
+  padding: 22px 18px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+}
+
+.board-member-card.no-image-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+.board-member-card.no-image-card .board-member-name-tamil {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #B71C1C;
+  line-height: 1.4;
+  margin-bottom: 6px;
+}
+
+.board-member-card.no-image-card .board-member-position-tamil {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #0D47A1;
+  margin-bottom: 0;
+}
