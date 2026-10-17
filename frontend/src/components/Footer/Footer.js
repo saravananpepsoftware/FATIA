@@ -34,7 +34,7 @@ const Footer = () => {
               <span className="footer-social-label">Follow Us:</span>
               <div className="footer-social-btns">
                 <a
-                  href="#"
+                  href="https://www.facebook.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Facebook"
@@ -46,7 +46,7 @@ const Footer = () => {
                   <span>Facebook</span>
                 </a>
                 <a
-                  href="#"
+                  href="https://www.instagram.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Instagram"
