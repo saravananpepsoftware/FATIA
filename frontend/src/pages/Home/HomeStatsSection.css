@@ -1,0 +1,115 @@
+/* ==========================================================
+   FATIA FLOATING STATISTICS SECTION (BELOW HOME HERO SECTION)
+   Exact luxury styling, clean continuous canvas flow
+   ========================================================== */
+
+.home-stats-section {
+  position: relative;
+  width: 100%;
+  padding: 24px 0 36px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 15;
+  background: transparent;
+}
+
+.home-stats-container {
+  max-width: 1060px;
+  width: 100%;
+  padding: 0 32px;
+  margin: 0 auto;
+}
+
+.stats-capsule-card {
+  background: #FFFFFF;
+  border-radius: 22px;
+  border: 1.2px solid rgba(220, 205, 185, 0.65);
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.07), 0 3px 10px rgba(181, 130, 44, 0.08);
+  padding: 22px 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stats-capsule-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.09), 0 5px 14px rgba(181, 130, 44, 0.12);
+}
+
+.stat-capsule-item {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.stat-capsule-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.stat-capsule-content {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.stat-capsule-number {
+  font-size: 2.3rem;
+  font-weight: 850;
+  color: #780E28;
+  letter-spacing: -0.01em;
+}
+
+.stat-capsule-label {
+  font-size: 0.9rem;
+  font-weight: 650;
+  color: #4B525D;
+  margin-top: 3px;
+}
+
+.stat-capsule-divider {
+  width: 1.5px;
+  height: 48px;
+  background: #E8DFD3;
+}
+
+/* ==========================================================
+   RESPONSIVE DESIGN BREAKPOINTS
+   ========================================================== */
+@media (max-width: 960px) {
+  .stats-capsule-card {
+    padding: 18px 32px;
+  }
+
+  .stat-capsule-number {
+    font-size: 1.95rem;
+  }
+
+  .stat-capsule-label {
+    font-size: 0.84rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-stats-section {
+    padding: 16px 0 28px 0;
+  }
+
+  .stats-capsule-card {
+    flex-direction: column;
+    gap: 22px;
+    padding: 26px 24px;
+    align-items: flex-start;
+  }
+
+  .stat-capsule-divider {
+    width: 100%;
+    height: 1px;
+  }
+}
+

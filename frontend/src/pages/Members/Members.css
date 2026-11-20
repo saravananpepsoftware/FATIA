@@ -1,116 +1,170 @@
-.members-controls {
-  margin-bottom: 32px;
-  display: flex;
-  justify-content: space-between;
+/* Members Page Header */
+.members-header-section {
+  margin-bottom: 24px;
+}
+
+.state-registry-pill {
+  display: inline-flex;
   align-items: center;
+  gap: 7px;
+  background: #FAF2E8;
+  border: 1px solid #EEDFCD;
+  color: #780E28;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: 9999px;
+  margin-bottom: 12px;
+}
+
+.state-registry-pill svg {
+  width: 13px;
+  height: 13px;
+  fill: currentColor;
+}
+
+.members-page-title {
+  font-size: 2.35rem;
+  font-weight: 850;
+  letter-spacing: -0.025em;
+  color: #111827;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.members-page-title .brand-red {
+  color: #780E28;
+}
+
+.members-page-subtitle {
+  font-size: 0.95rem;
+  color: #555E6D;
+  max-width: 780px;
+  line-height: 1.55;
+  font-weight: 500;
+}
+
+/* Search & Badge Controls Row */
+.members-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   gap: 16px;
+  margin-bottom: 44px;
+  margin-top: 24px;
   flex-wrap: wrap;
 }
 
-.members-search-wrapper {
+.search-pill-wrapper {
   position: relative;
-  flex: 1;
-  width: 100%;
-  max-width: 440px;
+  width: 440px;
+  max-width: 100%;
 }
 
-.members-search-input {
+.search-pill-input {
   width: 100%;
-  box-sizing: border-box;
-  padding: 12px 16px 12px 42px;
-  font-size: 0.95rem;
+  background: #FFFFFF;
+  border: 1px solid rgba(220, 205, 185, 0.6);
+  border-radius: 9999px;
+  padding: 12px 20px 12px 44px;
+  font-size: 0.88rem;
   font-family: inherit;
-  color: var(--color-charcoal);
-  background-color: var(--color-white);
-  border: 1px solid var(--color-light-beige);
-  border-radius: var(--radius-md);
+  color: #1F2937;
   outline: none;
-  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.03);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.members-search-input:focus {
-  border-color: var(--color-soft-gold);
-  box-shadow: 0 0 0 3px var(--color-soft-gold-light);
+.search-pill-input:focus {
+  border-color: #D4AF37;
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
 }
 
-.members-search-icon {
+.search-pill-icon {
   position: absolute;
-  left: 14px;
+  left: 16px;
   top: 50%;
   transform: translateY(-50%);
-  color: var(--color-slate-gray);
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
+  color: #780E28;
   pointer-events: none;
 }
 
-.members-count-badge {
-  font-size: 0.9rem;
-  font-weight: 700;
-  color: var(--color-soft-gold);
-  background-color: var(--color-soft-gold-light);
-  padding: 6px 16px;
-  border-radius: 20px;
+.showing-count-pill {
+  background: #FCEFD8;
+  border: 1px solid #F5DFB5;
+  padding: 8px 18px;
+  border-radius: 9999px;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: #4A3E30;
   white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(212, 175, 55, 0.08);
 }
 
-.members-grid {
+.showing-count-pill strong {
+  color: #780E28;
+  font-weight: 800;
+}
+
+/* Grid Layout */
+.members-podium-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  column-gap: 28px;
+  row-gap: 56px;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  justify-items: center;
 }
 
 .no-members-found {
   grid-column: 1 / -1;
   text-align: center;
   padding: 60px 20px;
-  background-color: var(--color-white);
-  border: 1px solid var(--color-light-beige);
-  border-radius: 16px;
-  color: var(--color-slate-gray);
+  background-color: #FFFFFF;
+  border: 1px solid #EEDFCD;
+  border-radius: 20px;
+  color: #555E6D;
   font-size: 1.05rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
 }
 
-@media (max-width: 1200px) {
-  .members-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 900px) {
-  .members-grid {
+@media (max-width: 1100px) {
+  .members-podium-grid {
     grid-template-columns: repeat(2, 1fr);
+    column-gap: 24px;
+    row-gap: 50px;
   }
+}
 
+@media (max-width: 768px) {
   .members-controls {
     flex-direction: column;
     align-items: stretch;
-    gap: 12px;
+    gap: 14px;
   }
 
-  .members-search-wrapper {
-    max-width: 100%;
+  .search-pill-wrapper {
     width: 100%;
   }
 
-  .members-count-badge {
+  .showing-count-pill {
     align-self: flex-start;
+  }
+
+  .members-page-title {
+    font-size: 1.85rem;
   }
 }
 
-@media (max-width: 600px) {
-  .members-grid {
+@media (max-width: 680px) {
+  .members-podium-grid {
     grid-template-columns: 1fr;
-  }
-
-  .members-search-input {
-    font-size: 0.9rem;
-    padding: 10px 14px 10px 38px;
-  }
-
-  .members-search-icon {
-    left: 12px;
-    width: 18px;
-    height: 18px;
+    row-gap: 44px;
   }
 }
