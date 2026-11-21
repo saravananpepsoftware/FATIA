@@ -1,0 +1,1247 @@
+/* =====================================================================
+   FATIA INDUSTRIAL SEMINAR & TECHNICAL WORKSHOPS STYLING
+   High-end interactive presentation matching FATIA luxury brand aesthetic
+   ===================================================================== */
+
+.seminar-page-root {
+  background-color: #FBF8F3;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  padding-bottom: 70px;
+  font-family: 'Mukta Malar', 'Plus Jakarta Sans', -apple-system, sans-serif;
+}
+
+.seminar-page-root button,
+.seminar-page-root input,
+.seminar-page-root span,
+.seminar-page-root p,
+.seminar-page-root div {
+  font-family: 'Mukta Malar', 'Plus Jakarta Sans', -apple-system, sans-serif;
+}
+
+/* =====================================================================
+   HERO HEADER
+   ===================================================================== */
+.seminar-hero-header {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 44px 24px 24px;
+  text-align: center;
+  position: relative;
+}
+
+.seminar-top-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #FFF7EC;
+  border: 1px solid #E4C882;
+  color: #72202C;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 5px 18px;
+  border-radius: 9999px;
+  margin-bottom: 14px;
+  box-shadow: 0 2px 8px rgba(180, 140, 50, 0.08);
+}
+
+.badge-glow-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #D4AF37;
+  box-shadow: 0 0 6px #D4AF37;
+}
+
+.seminar-main-heading {
+  font-family: 'Mukta Malar', Georgia, serif;
+  font-size: clamp(28px, 3.2vw, 44px);
+  font-weight: 800;
+  color: #4B0B14;
+  line-height: 1.25;
+  margin: 0 0 8px;
+  letter-spacing: -0.3px;
+}
+
+.seminar-sub-heading-ta {
+  font-family: 'Mukta Malar', sans-serif;
+  font-size: 19px;
+  font-weight: 600;
+  color: #6C1E2B;
+  margin: 0 0 10px;
+}
+
+.seminar-sub-heading-en {
+  max-width: 820px;
+  margin: 0 auto 28px;
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: #6A584F;
+}
+
+/* Stats Row */
+.seminar-stats-row {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  background: #FFFFFF;
+  border: 1px solid #EAD8B5;
+  border-radius: 9999px;
+  padding: 12px 32px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+  flex-wrap: wrap;
+}
+
+.seminar-stat-pill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.seminar-stat-pill .stat-number {
+  font-size: 20px;
+  font-weight: 800;
+  color: #4B0B14;
+  line-height: 1.1;
+}
+
+.seminar-stat-pill .stat-label {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #8C7262;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.seminar-stat-divider {
+  width: 1px;
+  height: 28px;
+  background: #E8DCCB;
+}
+
+/* =====================================================================
+   FEATURED SLIDESHOW SECTION
+   ===================================================================== */
+.seminar-showcase-section {
+  max-width: 1320px;
+  margin: 40px auto 60px;
+  padding: 0 24px;
+}
+
+.section-title-tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.tag-line {
+  flex: 1;
+  max-width: 160px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+}
+
+.tag-text {
+  font-size: 13px;
+  font-weight: 800;
+  color: #9C7722;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+/* Slideshow Card: Flex or Grid */
+.slideshow-main-card {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  background: #FFFFFF;
+  border-radius: 28px;
+  border: 1.5px solid #E8D5B0;
+  box-shadow: 0 16px 40px rgba(97, 9, 21, 0.08), 0 2px 8px rgba(212, 175, 55, 0.15);
+  overflow: hidden;
+  position: relative;
+  min-height: 480px;
+}
+
+/* Photo Side */
+.slideshow-photo-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  overflow: hidden;
+  background: #231613;
+}
+
+.slideshow-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  animation: photoFadeZoom 0.6s ease-out forwards;
+}
+
+@keyframes photoFadeZoom {
+  0% {
+    opacity: 0.6;
+    transform: scale(1.04);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.slideshow-photo-gradient-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 100%);
+  pointer-events: none;
+}
+
+/* Floating Date Tag on Photo */
+.slideshow-photo-date-tag {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(75, 11, 20, 0.88);
+  border: 1px solid #D4AF37;
+  color: #F8D98C;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 6px 16px;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+
+/* Slideshow Navigation Buttons on Photo */
+.slideshow-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #D4AF37;
+  color: #4B0B14;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  z-index: 3;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+
+.slideshow-nav-btn:hover {
+  background: #610915;
+  color: #FFDE7A;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.slideshow-nav-btn.prev-btn {
+  left: 18px;
+}
+
+.slideshow-nav-btn.next-btn {
+  right: 18px;
+}
+
+/* Details Side */
+.slideshow-details-container {
+  padding: 38px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #FFFFFF;
+}
+
+.slideshow-meta-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.slideshow-category-badge {
+  background: #FFF4E5;
+  border: 1px solid #EAC87D;
+  color: #72202C;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  padding: 4px 14px;
+  border-radius: 9999px;
+}
+
+.slideshow-counter {
+  font-size: 13px;
+  font-weight: 800;
+  color: #9C7722;
+  font-family: monospace;
+}
+
+/* Dynamic Workshop Names */
+.slideshow-workshop-name-ta {
+  font-family: 'Mukta Malar', Georgia, serif;
+  font-size: 23px;
+  font-weight: 800;
+  color: #4B0B14;
+  line-height: 1.35;
+  margin: 0 0 6px;
+  letter-spacing: -0.2px;
+}
+
+.slideshow-workshop-name-en {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 15px;
+  color: #6C5549;
+  margin: 0 0 20px;
+  line-height: 1.4;
+}
+
+/* Info Grid (Date, Venue, Speaker) */
+.slideshow-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  background: #FDFBF8;
+  border: 1px solid #EEDFCA;
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.info-cell {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.info-cell.full-width {
+  grid-column: 1 / -1;
+  border-top: 1px dashed #E5D5C0;
+  padding-top: 10px;
+}
+
+.info-cell-icon {
+  font-size: 16px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.info-cell-label {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  color: #8C7468;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 2px;
+}
+
+.info-cell-val {
+  display: block;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #382B26;
+  line-height: 1.35;
+}
+
+.info-cell-val.highlight-gold {
+  color: #8C1C2B;
+  font-weight: 800;
+}
+
+.speaker-name {
+  color: #4B0B14;
+  font-weight: 700;
+}
+
+/* Summary */
+.slideshow-workshop-summary {
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: #4A3A34;
+  margin: 0 0 24px;
+}
+
+/* Action Row */
+.slideshow-action-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: auto;
+}
+
+.slideshow-primary-btn {
+  background: linear-gradient(135deg, #610915 0%, #46060E 100%);
+  border: 1px solid #D4AF37;
+  color: #FFDE7A;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 11px 22px;
+  border-radius: 9999px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 14px rgba(97, 9, 21, 0.25);
+  transition: all 0.25s ease;
+}
+
+.slideshow-primary-btn:hover {
+  background: #7D1222;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(97, 9, 21, 0.35);
+}
+
+.slideshow-play-pause-btn {
+  background: #F4EDE3;
+  border: 1px solid #DECBB3;
+  color: #554137;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 10px 18px;
+  border-radius: 9999px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.slideshow-play-pause-btn:hover {
+  background: #EADDCF;
+  color: #4B0B14;
+}
+
+/* =====================================================================
+   THUMBNAILS NAVIGATION STRIP
+   ===================================================================== */
+.slideshow-thumbnails-strip {
+  margin-top: 24px;
+}
+
+.thumbnail-strip-title {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.thumbnail-strip-title span {
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  color: #9C7722;
+  text-transform: uppercase;
+}
+
+.thumbnails-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
+}
+
+.workshop-thumb-card {
+  background: #FFFFFF;
+  border: 1.5px solid #E4D5BE;
+  border-radius: 14px;
+  overflow: hidden;
+  padding: 8px;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.workshop-thumb-card:hover {
+  border-color: #B08D57;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.workshop-thumb-card.active {
+  border-color: #8C1C2B;
+  background: #FFF7EC;
+  box-shadow: 0 0 0 2px #D4AF37, 0 8px 18px rgba(97, 9, 21, 0.15);
+}
+
+.thumb-photo-wrap {
+  width: 100%;
+  height: 64px;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  background: #231613;
+}
+
+.thumb-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thumb-active-glow {
+  position: absolute;
+  inset: 0;
+  border: 2px solid #D4AF37;
+  border-radius: 8px;
+}
+
+.thumb-text-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.thumb-date {
+  font-size: 11px;
+  font-weight: 700;
+  color: #8C1C2B;
+  margin-bottom: 2px;
+}
+
+.thumb-title {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #382B26;
+  line-height: 1.25;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* =====================================================================
+   TEMPLATE PLACEHOLDER STATE (WHEN DATA IS EMPTY)
+   ===================================================================== */
+.seminar-template-placeholder-section {
+  max-width: 1000px;
+  margin: 30px auto 60px;
+  padding: 0 24px;
+}
+
+.template-placeholder-card {
+  background: #FFFFFF;
+  border: 1.5px dashed #D4AF37;
+  border-radius: 28px;
+  padding: 50px 36px;
+  text-align: center;
+  box-shadow: 0 12px 36px rgba(97, 9, 21, 0.05);
+  position: relative;
+}
+
+.placeholder-icon-halo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #8B1527 0%, #4B0B14 100%);
+  border: 2px solid #D4AF37;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  box-shadow: 0 8px 24px rgba(75, 11, 20, 0.25);
+}
+
+.placeholder-badge {
+  display: inline-block;
+  background: #FFF7EC;
+  border: 1px solid #E4C882;
+  color: #72202C;
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 4px 16px;
+  border-radius: 9999px;
+  margin-bottom: 14px;
+}
+
+.placeholder-title-ta {
+  font-family: 'Mukta Malar', Georgia, serif;
+  font-size: 26px;
+  font-weight: 800;
+  color: #4B0B14;
+  margin: 0 0 4px;
+}
+
+.placeholder-title-en {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 16px;
+  color: #6C5549;
+  margin: 0 0 16px;
+}
+
+.placeholder-desc-ta {
+  font-family: 'Mukta Malar', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #72202C;
+  margin: 0 0 8px;
+}
+
+.placeholder-desc-en {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #55443D;
+  max-width: 680px;
+  margin: 0 auto 28px;
+}
+
+.placeholder-feature-pills {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.feat-pill {
+  background: #FAF6EF;
+  border: 1px solid #E8DCCB;
+  color: #4B0B14;
+  font-size: 12.5px;
+  font-weight: 700;
+  padding: 6px 16px;
+  border-radius: 9999px;
+}
+
+/* =====================================================================
+   DIRECTORY & ARCHIVE SECTION
+   ===================================================================== */
+.seminar-directory-section {
+  max-width: 1320px;
+  margin: 60px auto 40px;
+  padding: 0 24px;
+}
+
+.directory-header-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.directory-title {
+  font-family: 'Mukta Malar', Georgia, serif;
+  font-size: 28px;
+  font-weight: 800;
+  color: #4B0B14;
+  margin: 0 0 4px;
+}
+
+.directory-subtitle {
+  font-size: 14.5px;
+  color: #6C5B52;
+  margin: 0;
+}
+
+.directory-search-box {
+  display: flex;
+  align-items: center;
+  background: #FFFFFF;
+  border: 1px solid #D4AF37;
+  border-radius: 9999px;
+  padding: 8px 18px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+  width: 100%;
+  max-width: 380px;
+}
+
+.directory-search-input {
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 100%;
+  font-size: 13.5px;
+  color: #33221C;
+  margin-left: 8px;
+}
+
+.search-clear-btn {
+  border: none;
+  background: transparent;
+  color: #8C786E;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+/* Category Filter Tabs */
+.directory-category-tabs {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.cat-tab-btn {
+  border: 1px solid #DECBB3;
+  background: #FFFFFF;
+  color: #554137;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 7px 18px;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cat-tab-btn:hover {
+  border-color: #A88238;
+  background: #FFFBF4;
+}
+
+.cat-tab-btn.active {
+  background: #610915;
+  border-color: #D4AF37;
+  color: #F8D98C;
+  box-shadow: 0 4px 12px rgba(97, 9, 21, 0.2);
+}
+
+/* Directory Cards Grid */
+.directory-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.directory-card {
+  background: #FFFFFF;
+  border: 1px solid #E8DCCB;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.directory-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.1);
+  border-color: #D4AF37;
+}
+
+.dir-card-photo-box {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  background: #231613;
+}
+
+.dir-card-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.directory-card:hover .dir-card-photo {
+  transform: scale(1.05);
+}
+
+.dir-card-date-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(75, 11, 20, 0.88);
+  border: 1px solid #D4AF37;
+  color: #F8D98C;
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  backdrop-filter: blur(4px);
+}
+
+.dir-card-cat-badge {
+  position: absolute;
+  bottom: 14px;
+  right: 14px;
+  background: rgba(255, 255, 255, 0.92);
+  color: #4B0B14;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.dir-card-body {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.dir-card-title-ta {
+  font-family: 'Mukta Malar', Georgia, serif;
+  font-size: 18px;
+  font-weight: 800;
+  color: #4B0B14;
+  line-height: 1.35;
+  margin: 0 0 4px;
+}
+
+.dir-card-title-en {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 13.5px;
+  color: #6C5549;
+  margin: 0 0 14px;
+  line-height: 1.35;
+}
+
+.dir-card-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
+  background: #FAF7F2;
+  border: 1px solid #EEE5D7;
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.dir-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.meta-icon {
+  font-size: 13px;
+  flex-shrink: 0;
+}
+
+.meta-text {
+  font-size: 12.5px;
+  color: #49372F;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.speaker-text {
+  color: #72202C;
+  font-weight: 700;
+}
+
+.dir-card-desc {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: #55443D;
+  margin: 0 0 18px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.dir-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px dashed #E5D5C0;
+}
+
+.dir-view-btn {
+  background: transparent;
+  border: none;
+  color: #8C1C2B;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s ease;
+}
+
+.dir-view-btn:hover {
+  color: #4B0B14;
+  text-decoration: underline;
+}
+
+.dir-spotlight-btn {
+  background: #FFF7EC;
+  border: 1px solid #E4C882;
+  color: #702619;
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.dir-spotlight-btn:hover {
+  background: #610915;
+  color: #FFDE7A;
+  border-color: #D4AF37;
+}
+
+.directory-empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  background: #FFFFFF;
+  border-radius: 16px;
+  border: 1px dashed #D4AF37;
+  max-width: 480px;
+  margin: 40px auto;
+}
+
+.reset-filter-btn {
+  margin-top: 12px;
+  background: #610915;
+  color: #FFFFFF;
+  border: none;
+  padding: 8px 22px;
+  border-radius: 9999px;
+  cursor: pointer;
+}
+
+/* =====================================================================
+   CTA BANNER
+   ===================================================================== */
+.seminar-cta-banner {
+  max-width: 1280px;
+  margin: 60px auto 20px;
+  padding: 0 24px;
+}
+
+.cta-banner-content {
+  background: linear-gradient(135deg, #4A0811 0%, #680E1C 50%, #4A0811 100%);
+  border: 1.5px solid #D4AF37;
+  border-radius: 24px;
+  padding: 44px 36px;
+  text-align: center;
+  color: #FFFFFF;
+  box-shadow: 0 16px 40px rgba(74, 8, 17, 0.22);
+}
+
+.cta-tag {
+  display: inline-block;
+  background: rgba(212, 175, 55, 0.2);
+  border: 1px solid #D4AF37;
+  color: #F8D98C;
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 4px 14px;
+  border-radius: 9999px;
+  margin-bottom: 14px;
+}
+
+.cta-title {
+  font-family: 'Mukta Malar', Georgia, serif;
+  font-size: clamp(22px, 2.4vw, 32px);
+  font-weight: 800;
+  color: #FFFFFF;
+  margin: 0 0 12px;
+  line-height: 1.35;
+}
+
+.cta-desc {
+  max-width: 780px;
+  margin: 0 auto 28px;
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.cta-btn-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.cta-primary-btn {
+  background: linear-gradient(135deg, #FFDEAD 0%, #F5C26B 100%);
+  color: #4C1407;
+  font-weight: 800;
+  font-size: 14px;
+  padding: 12px 24px;
+  border-radius: 9999px;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+}
+
+.cta-primary-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
+
+.cta-secondary-btn {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 11px 22px;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.cta-secondary-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* =====================================================================
+   DETAILS MODAL
+   ===================================================================== */
+.seminar-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: modalFadeIn 0.2s ease-out;
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.seminar-modal-dialog {
+  background: #FFFFFF;
+  border-radius: 24px;
+  max-width: 720px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  border: 1.5px solid #D4AF37;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid #D4AF37;
+  color: #FFFFFF;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.modal-header-banner {
+  height: 240px;
+  position: relative;
+  background: #231613;
+  overflow: hidden;
+}
+
+.modal-banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modal-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(75, 11, 20, 0.95) 100%);
+}
+
+.modal-banner-info {
+  position: absolute;
+  bottom: 20px;
+  left: 24px;
+  right: 24px;
+  color: #FFFFFF;
+}
+
+.modal-badge {
+  background: #D4AF37;
+  color: #4B0B14;
+  font-size: 11.5px;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: 6px;
+  margin-right: 8px;
+}
+
+.modal-date-pill {
+  font-size: 12.5px;
+  color: #F8D98C;
+  font-weight: 700;
+}
+
+.modal-title-ta {
+  font-family: 'Mukta Malar', Georgia, serif;
+  font-size: 21px;
+  font-weight: 800;
+  margin: 8px 0 2px;
+  line-height: 1.3;
+}
+
+.modal-title-en {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+}
+
+.modal-body-content {
+  padding: 24px;
+}
+
+.modal-grid-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  background: #FDFBF8;
+  border: 1px solid #EEDFCA;
+  border-radius: 14px;
+  padding: 14px 18px;
+  margin-bottom: 20px;
+}
+
+.modal-info-box strong {
+  font-size: 12px;
+  color: #72202C;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.modal-info-box p {
+  font-size: 14px;
+  color: #382B26;
+  font-weight: 600;
+  margin: 0;
+}
+
+.modal-section-block {
+  margin-bottom: 20px;
+}
+
+.modal-section-heading {
+  font-size: 14px;
+  font-weight: 800;
+  color: #4B0B14;
+  text-transform: uppercase;
+  margin: 0 0 8px;
+  letter-spacing: 0.5px;
+}
+
+.modal-desc-p {
+  font-size: 14px;
+  line-height: 1.65;
+  color: #4A3A34;
+  margin: 0;
+}
+
+.modal-topics-list {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.modal-topics-list li {
+  font-size: 14px;
+  color: #382B26;
+  margin-bottom: 6px;
+}
+
+.modal-footer-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #E8DCCB;
+  padding-top: 16px;
+  margin-top: 16px;
+}
+
+.modal-attendees-tag {
+  font-size: 13px;
+  font-weight: 700;
+  color: #72202C;
+}
+
+.modal-close-action-btn {
+  background: #610915;
+  color: #FFFFFF;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 9999px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+/* =====================================================================
+   RESPONSIVE DESIGN
+   ===================================================================== */
+@media (max-width: 1080px) {
+  .slideshow-main-card {
+    grid-template-columns: 1fr;
+  }
+  .slideshow-photo-container {
+    min-height: 320px;
+  }
+  .thumbnails-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .directory-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .directory-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .thumbnails-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .slideshow-details-container {
+    padding: 24px 20px;
+  }
+  .slideshow-info-grid {
+    grid-template-columns: 1fr;
+  }
+  .modal-grid-details {
+    grid-template-columns: 1fr;
+  }
+}
+

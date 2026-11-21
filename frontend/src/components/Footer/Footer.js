@@ -71,6 +71,21 @@ const Footer = () => {
                 </NavLink>
               </li>
               <li>
+                <NavLink to="/social-welfare" className="footer-link-item">
+                  Social Welfare
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/industrial-seminar" className="footer-link-item">
+                  Industrial Seminar
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/activities" className="footer-link-item">
+                  Activities
+                </NavLink>
+              </li>
+              <li>
                 <NavLink to="/events" className="footer-link-item">
                   Events
                 </NavLink>

@@ -1,120 +1,740 @@
-.fair-year-header-card {
-  background-color: var(--color-white);
-  border: none;
-  border-radius: 20px;
-  padding: 36px;
-  margin-bottom: 32px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+@import url('https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@400;500;600;700;800&family=Noto+Sans+Tamil:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700&display=swap');
+
+/* ==========================================================================
+   FULL SCREEN PAGE CONTAINER OVERRIDE (NO BOXED WHITE CARDS)
+   ========================================================================== */
+
+.fair-year-page-container {
+  max-width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow-x: hidden;
   position: relative;
-  overflow: hidden;
-}
-
-.fair-year-header-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 6px;
-  background-color: var(--color-soft-gold);
-}
-
-.fair-year-badge-pill {
-  font-size: 0.82rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--color-soft-gold);
-  background-color: var(--color-soft-gold-light);
-  padding: 4px 14px;
-  border-radius: 20px;
-  display: inline-block;
-  margin-bottom: 12px;
-}
-
-.fair-year-title {
-  font-size: 2.2rem;
-  font-weight: 800;
-  color: var(--color-charcoal);
-  margin-bottom: 12px;
-}
-
-.fair-year-tagline {
-  font-size: 1.05rem;
-  color: var(--color-slate-gray);
-  line-height: 1.5;
-}
-
-/* Full Width About Section */
-.fair-about-box-full {
-  background-color: var(--color-white);
-  border: none;
-  border-radius: 16px;
-  padding: 32px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  margin-bottom: 40px;
   width: 100%;
 }
 
-.fair-section-heading {
-  font-size: 1.25rem;
+/* ==========================================================================
+   FULL SCREEN SHOWCASE CONTAINER WITH IVORY BACKGROUND
+   ========================================================================== */
+
+.fair-year-showcase-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: #FAF8F5;
+  background-image: radial-gradient(ellipse at 50% 10%, #FFFFFF 0%, #FAF7F1 45%, #F4ECE0 100%);
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0;
+  padding: 50px 0 100px 0;
+}
+
+/* ==========================================================================
+   CORNER RIBBONS (MAROON & POLISHED GOLD SWOOSHES)
+   ========================================================================== */
+
+.fair-year-ribbon-tl {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 380px;
+  height: 260px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.fair-year-ribbon-br {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 380px;
+  height: 260px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.fair-year-corner-ribbon-tl,
+.fair-year-corner-ribbon-br {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* ==========================================================================
+   DELICATE GUILLOCHE BACKGROUND CURVES
+   ========================================================================== */
+
+.fair-year-bg-waves-wrapper {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.fair-year-bg-waves {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* ==========================================================================
+   INNER CONTENT CONTAINER
+   ========================================================================== */
+
+.fair-year-showcase-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1560px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* ==========================================================================
+   LUXURY PAGE HEADER
+   ========================================================================== */
+
+.fair-year-header-luxury {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.fair-year-emblem-badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.fair-year-fatia-logo {
+  height: 64px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.12));
+}
+
+.fair-year-tag {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.fair-year-tag-pill {
+  font-family: var(--font-primary, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
+  font-size: 0.72rem;
   font-weight: 700;
-  color: var(--color-charcoal);
-  margin-bottom: 16px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #8C5A14;
+  background: #FFF9ED;
+  border: 1px solid #E5C77A;
+  padding: 5px 18px;
+  border-radius: 20px;
+  box-shadow: 0 2px 6px rgba(184, 134, 11, 0.1);
+}
+
+.fair-year-page-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.35rem;
+  font-weight: 800;
+  color: #550715;
+  letter-spacing: -0.01em;
+  margin: 0 0 10px 0;
+}
+
+.fair-year-page-subtitle {
+  font-family: var(--font-primary, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
+  font-size: 0.98rem;
+  color: #5C6269;
+  max-width: 720px;
+  margin: 0 auto 16px auto;
+  line-height: 1.5;
+}
+
+.fair-year-gold-divider {
   display: flex;
   align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 0 auto;
+  max-width: 240px;
+}
+
+/* ==========================================================================
+   FAIR YEARS SWITCHER PILLS BAR
+   ========================================================================== */
+
+.fair-year-nav-bar-luxury {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 10px;
+  margin: 28px 0 35px 0;
 }
 
-.fair-about-text {
-  font-size: 1.02rem;
-  color: var(--color-slate-gray);
-  line-height: 1.7;
+.fair-year-nav-pill {
+  font-family: var(--font-primary, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #550715;
+  background: #FFFFFF;
+  border: 1px solid #E2C787;
+  padding: 8px 18px;
+  border-radius: 24px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  transition: all 0.22s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
 }
 
-/* Dedicated Committee Members Section */
-.fair-committee-section {
-  margin-bottom: 44px;
+.fair-nav-cal-icon {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  color: #B8860B;
+  transition: color 0.2s ease;
 }
 
-.fair-committee-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+.fair-year-nav-pill:hover {
+  background: #FFF9ED;
+  border-color: #C89B2B;
+  color: #700B1A;
+  transform: translateY(-1px);
 }
 
-.fair-committee-card {
-  background-color: var(--color-white);
-  border: none;
-  border-radius: 20px;
-  padding: 38px 24px;
-  min-height: 250px;
+.fair-year-nav-pill.active {
+  background: linear-gradient(135deg, #700B1A 0%, #4D0612 100%);
+  color: #FFFFFF;
+  border-color: #8C1328;
+  box-shadow: 0 4px 14px rgba(77, 6, 18, 0.28);
+}
+
+.fair-year-nav-pill.active .fair-nav-cal-icon {
+  color: #F5D884;
+}
+
+.fair-year-gallery-section {
+  position: relative;
+  width: 100%;
+  margin-bottom: 75px;
+}
+
+/* ==========================================================================
+   SECTION HEADER (FAIR X LEADERSHIP, TITLE, DESC, UNDERLINE)
+   ========================================================================== */
+
+.fair-year-section-luxury {
+  position: relative;
+  width: 100%;
+}
+
+.fair-year-section-header {
+  margin-bottom: 34px;
+  text-align: left;
+}
+
+.fair-year-num-badge {
+  display: inline-block;
+  font-family: var(--font-primary, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #9A6516;
+  background: #FFF9ED;
+  border: 1px solid #E5C77A;
+  padding: 4px 14px;
+  border-radius: 14px;
+  margin-bottom: 10px;
+}
+
+.fair-year-section-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #550715;
+  margin: 0 0 6px 0;
+  letter-spacing: -0.01em;
+}
+
+.fair-year-section-desc {
+  font-family: var(--font-primary, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
+  font-size: 0.92rem;
+  color: #5A6066;
+  margin: 0 0 12px 0;
+  line-height: 1.45;
+}
+
+.fair-year-underline {
+  width: 65px;
+  height: 3px;
+  background: #700B1A;
+  border-radius: 2px;
+}
+
+/* ==========================================================================
+   CONNECTED HORIZONTAL TIMELINE ROW & MEMBERS
+   ========================================================================== */
+
+.fair-year-row-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.fair-year-row-wrapper.count-3 {
+  max-width: 1040px;
+}
+
+.fair-year-row-wrapper.count-4 {
+  max-width: 1340px;
+}
+
+/* Member Medallion Card */
+.fair-member-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   text-align: center;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  width: 250px;
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
 }
 
-.fair-committee-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.14);
+.fair-member-card:hover {
+  transform: translateY(-3px);
 }
 
-@media (max-width: 900px) {
-  .fair-committee-grid {
-    grid-template-columns: repeat(2, 1fr);
+.fair-avatar-frame {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fair-avatar-circle {
+  position: absolute;
+  width: 138px;
+  height: 138px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.16);
+  border: 3px solid #D8AF44;
+  background: #FFFFFF;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fair-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 15%;
+  display: block;
+}
+
+.fair-avatar-placeholder {
+  position: absolute;
+  width: 138px;
+  height: 138px;
+  border-radius: 50%;
+  background: #F4EFE5;
+  border: 3px solid #D8AF44;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fair-placeholder-icon {
+  width: 62px;
+  height: 62px;
+  color: #A88647;
+  opacity: 0.85;
+}
+
+.fair-arcs-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 180px;
+  height: 180px;
+  z-index: 2;
+  pointer-events: none;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.2));
+}
+
+.fair-member-name {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: #550715;
+  margin: 16px 0 4px 0;
+  line-height: 1.3;
+}
+
+.fair-member-role {
+  font-family: var(--font-primary, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
+  font-size: 0.94rem;
+  font-weight: 600;
+  color: #2D3136;
+  line-height: 1.35;
+  display: block;
+}
+
+.fair-gold-dash {
+  width: 38px;
+  height: 2.5px;
+  background: #C89B2B;
+  border-radius: 2px;
+  margin: 9px auto 0 auto;
+}
+
+/* ==========================================================================
+   HORIZONTAL TIMELINE CONNECTOR BETWEEN MEDALLIONS
+   ========================================================================== */
+
+.fair-year-connector {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 89px; /* Precisely centers with 180px avatar frame height */
+  min-width: 30px;
+  max-width: 150px;
+  height: 12px;
+  z-index: 0;
+}
+
+.fair-year-connector-line {
+  flex: 1;
+  height: 1.5px;
+  background: linear-gradient(90deg, #D4AF37, #E9C465);
+  opacity: 0.85;
+}
+
+.fair-year-connector-dot {
+  width: 9px;
+  height: 9px;
+  background: #C89B2B;
+  border-radius: 50%;
+  box-shadow: 0 0 7px rgba(200, 155, 43, 0.6);
+  margin: 0 2px;
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   ADDITIONAL COMMITTEE MEMBERS GRID (6 IN A ROW ON DESKTOP)
+   ========================================================================== */
+
+.fair-committee-medallions-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 36px 16px;
+  max-width: 1520px;
+  margin: 0 auto;
+  justify-items: center;
+}
+
+.fair-committee-medallions-grid .fair-member-card {
+  width: 100%;
+  max-width: 235px;
+}
+
+.fair-committee-medallions-grid .fair-avatar-frame {
+  width: 160px;
+  height: 160px;
+}
+
+.fair-committee-medallions-grid .fair-avatar-circle,
+.fair-committee-medallions-grid .fair-avatar-placeholder {
+  width: 122px;
+  height: 122px;
+  border-width: 2.5px;
+}
+
+.fair-committee-medallions-grid .fair-placeholder-icon {
+  width: 54px;
+  height: 54px;
+}
+
+.fair-committee-medallions-grid .fair-arcs-svg {
+  width: 160px;
+  height: 160px;
+}
+
+.fair-committee-medallions-grid .fair-member-name {
+  font-size: 1.08rem;
+  margin: 12px 0 3px 0;
+}
+
+.fair-committee-medallions-grid .fair-member-role {
+  font-size: 0.88rem;
+}
+
+.fair-committee-medallions-grid .fair-gold-dash {
+  width: 32px;
+  height: 2px;
+  margin: 8px auto 0 auto;
+}
+
+/* ==========================================================================
+   ABOUT FAIR LUXURY CARD
+   ========================================================================== */
+
+.fair-year-about-section {
+  width: 100%;
+  margin: 10px auto 55px auto;
+}
+
+.fair-about-card-luxury {
+  background: #FFFFFF;
+  border: 1px solid #E6D5B8;
+  border-radius: 20px;
+  padding: 40px 48px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.04);
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.fair-about-header {
+  margin-bottom: 18px;
+}
+
+.fair-about-badge {
+  display: inline-block;
+  font-family: var(--font-primary, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #9A6516;
+  background: #FFF9ED;
+  border: 1px solid #E5C77A;
+  padding: 4px 14px;
+  border-radius: 14px;
+  margin-bottom: 8px;
+}
+
+.fair-about-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: #550715;
+  margin: 0 0 10px 0;
+}
+
+.fair-about-body {
+  font-family: var(--font-primary, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
+  font-size: 1.02rem;
+  color: #4A5056;
+  line-height: 1.75;
+  margin: 18px 0 0 0;
+}
+
+/* ==========================================================================
+   GALLERY SECTION (1ST SECTION UNDER NAV PILLS)
+   ========================================================================== */
+
+.fair-year-gallery-section {
+  max-width: 1100px;
+  margin: 0 auto 75px auto;
+}
+
+.fair-year-gallery-section .member-gallery-container {
+  margin-top: 0;
+}
+
+.fair-year-gallery-section .member-gallery-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: #550715;
+}
+
+.fair-year-gallery-section .carousel-main-stage {
+  border: 2px solid rgba(212, 175, 55, 0.4);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.16);
+}
+
+/* ==========================================================================
+   NOT FOUND STATE
+   ========================================================================== */
+
+.fair-year-not-found {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.fair-year-not-found h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2rem;
+  color: #550715;
+  margin-bottom: 12px;
+}
+
+.fair-year-not-found p {
+  color: #5C6269;
+  font-size: 1rem;
+  margin-bottom: 24px;
+}
+
+.fair-btn-gold {
+  display: inline-block;
+  background: linear-gradient(135deg, #700B1A 0%, #4D0612 100%);
+  color: #FFFFFF;
+  border: 1px solid #8C1328;
+  padding: 10px 24px;
+  border-radius: 24px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(77, 6, 18, 0.25);
+  transition: all 0.2s ease;
+}
+
+.fair-btn-gold:hover {
+  background: linear-gradient(135deg, #8C1328 0%, #5A0817 100%);
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   RESPONSIVE LAYOUT
+   ========================================================================== */
+
+@media (max-width: 1400px) {
+  .fair-committee-medallions-grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 34px 16px;
+  }
+}
+
+@media (max-width: 1140px) {
+  .fair-year-row-wrapper {
+    flex-wrap: wrap;
+    gap: 40px 24px;
+    justify-content: center;
+  }
+
+  .fair-year-connector {
+    display: none;
+  }
+
+  .fair-member-card {
+    width: calc(50% - 24px);
+    max-width: 270px;
+  }
+
+  .fair-committee-medallions-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px 16px;
+  }
+}
+
+@media (max-width: 860px) {
+  .fair-committee-medallions-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px 14px;
   }
 }
 
 @media (max-width: 600px) {
-  .fair-committee-grid {
-    grid-template-columns: 1fr;
+  .fair-year-showcase-container {
+    padding: 36px 0 70px 0;
   }
 
-  .fair-year-title {
-    font-size: 1.8rem;
+  .fair-year-showcase-inner {
+    padding: 0 16px;
+  }
+
+  .fair-year-page-title {
+    font-size: 1.85rem;
+  }
+
+  .fair-year-section-title {
+    font-size: 1.45rem;
+  }
+
+  .fair-about-card-luxury {
+    padding: 28px 20px;
+  }
+
+  .fair-member-card {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  .fair-avatar-frame {
+    width: 156px;
+    height: 156px;
+  }
+
+  .fair-avatar-circle,
+  .fair-avatar-placeholder {
+    width: 120px;
+    height: 120px;
+  }
+
+  .fair-arcs-svg {
+    width: 156px;
+    height: 156px;
+  }
+
+  .fair-committee-medallions-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px 10px;
+  }
+
+  .fair-committee-medallions-grid .fair-avatar-frame {
+    width: 138px;
+    height: 138px;
+  }
+
+  .fair-committee-medallions-grid .fair-avatar-circle,
+  .fair-committee-medallions-grid .fair-avatar-placeholder {
+    width: 104px;
+    height: 104px;
+  }
+
+  .fair-committee-medallions-grid .fair-arcs-svg {
+    width: 138px;
+    height: 138px;
+  }
+
+  .fair-committee-medallions-grid .fair-member-name {
+    font-size: 0.96rem;
+  }
+
+  .fair-committee-medallions-grid .fair-member-role {
+    font-size: 0.8rem;
+  }
+
+  .fair-year-ribbon-tl,
+  .fair-year-ribbon-br {
+    width: 220px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 420px) {
+  .fair-committee-medallions-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
   }
 }

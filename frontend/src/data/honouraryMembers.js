@@ -7,7 +7,7 @@ export const honouraryMembers = [
   { name: "Mr. K. Veerakumar", company: "New Star Dyeing" },
   { name: "Mr. V. Senthilmurugan", company: "V.V. National" },
   { name: "Mr. V.A.B. Malarmannan & Mr. V.A.B. Bal Murugan", company: "Imperial Textile Dyers Pvt. Ltd." },
-  { name: "Mr. P. Rajesh & Mr. P. Ravishankar", company: "P&C Constructions", image: "/assets/honourary/P&C Sankar.jpeg" },
+  { name: "Mr. P. Rajesh & Mr. P. Ravishankar", company: "P&C Constructions" },
   { name: "Mr. P. Ravichandran", company: "Gnanam Tex", image: "/assets/board/P.Ravichandran-General Secretary.jpg" },
   { name: "Mr. C. Duraisamy", company: "Raja Chamber", image: "/assets/committee_chairmen/C.Doraisamy, Building Maintanace Committee Chairman.jpg" },
   { name: "Mr. T. Jagadeesan", company: "Sumangali Stores", image: "/assets/board/T.Jagadeesan-Immediate Past President.jpg" },
@@ -103,7 +103,7 @@ export const silverJubileeHallMembers = [
   { name: "Mr. K.P. Muthukumar", company: "Orange Plastics" },
   { name: "Mr. K.P. Mutharasu", company: "Zigma Computers" },
   { name: "Mr. S.N. Sivakumar", company: "Sivaji & Co" },
-  { name: "Mr. K.K.S.K. Rafiq", company: "KKSK International LLP" },
+  { name: "Mr. K.K.S.K. Rafiq", company: "KKSK International LLP", image: "/assets/board/KKSK.png" },
   { name: "Mr. Sameek Agarwal", company: "Lanco Spices" },
   { name: "Mr. N. Srinivasan", company: "Jones" }
 ];

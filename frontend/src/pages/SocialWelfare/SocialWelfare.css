@@ -1,0 +1,716 @@
+/* =====================================================================
+   FATIA SOCIAL WELFARE & INITIATIVES TIMELINE STYLING
+   High-end, historical timeline layout matching user reference design
+   ===================================================================== */
+
+.welfare-journey-page {
+  background-color: #FBF8F3;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  padding-bottom: 60px;
+  font-family: 'Mukta Malar', 'Plus Jakarta Sans', -apple-system, sans-serif;
+}
+
+.welfare-journey-page button,
+.welfare-journey-page input,
+.welfare-journey-page span,
+.welfare-journey-page p,
+.welfare-journey-page div {
+  font-family: 'Mukta Malar', 'Plus Jakarta Sans', -apple-system, sans-serif;
+}
+
+/* =====================================================================
+   HERO HEADER & WATERMARK SECTION
+   ===================================================================== */
+.welfare-journey-hero {
+  position: relative;
+  padding: 44px 24px 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Faint architectural landmark sketch watermark on top right */
+.welfare-landmark-watermark {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  width: 440px;
+  max-width: 38vw;
+  opacity: 0.20;
+  pointer-events: none;
+  z-index: 0;
+  mix-blend-mode: multiply;
+  filter: contrast(1.05) sepia(0.2);
+}
+
+/* Top left golden/burgundy decorative swoop */
+.welfare-corner-swoosh {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 180px;
+  background: radial-gradient(ellipse at 0% 0%, rgba(97, 9, 21, 0.08) 0%, rgba(212, 175, 55, 0.05) 50%, transparent 80%);
+  pointer-events: none;
+}
+
+.welfare-hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* OUR JOURNEY Gold Tag */
+.welfare-journey-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #A88238;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.welfare-journey-tag .tag-dash {
+  color: #D4AF37;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+/* Main Tamil Serif Heading */
+.welfare-main-title {
+  font-family: 'Mukta Malar', 'Noto Serif Tamil', Georgia, serif;
+  font-size: clamp(28px, 3.2vw, 42px);
+  font-weight: 800;
+  color: #4B0B14;
+  line-height: 1.3;
+  margin: 0 0 6px;
+  letter-spacing: -0.3px;
+  text-shadow: 0 1px 2px rgba(75, 11, 20, 0.06);
+}
+
+/* English Italic Subtitle */
+.welfare-sub-title {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+  font-size: clamp(17px, 1.8vw, 22px);
+  color: #6E5346;
+  margin: 0 0 24px;
+}
+
+/* Centered Golden Capsule Search Bar */
+.welfare-search-capsule {
+  max-width: 540px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  background: #FFFFFF;
+  border: 1.5px solid #D4AF37;
+  border-radius: 9999px;
+  padding: 8px 20px;
+  box-shadow: 0 4px 18px rgba(180, 140, 50, 0.09);
+  transition: all 0.25s ease;
+}
+
+.welfare-search-capsule:focus-within {
+  border-color: #9C182F;
+  box-shadow: 0 6px 22px rgba(156, 24, 47, 0.15);
+}
+
+.welfare-search-icon {
+  flex-shrink: 0;
+  margin-right: 12px;
+}
+
+.welfare-search-input {
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 100%;
+  font-size: 14.5px;
+  color: #33221C;
+  font-family: inherit;
+}
+
+.welfare-search-input::placeholder {
+  color: #9B8C85;
+  font-size: 14px;
+}
+
+.welfare-search-clear {
+  border: none;
+  background: #F1ECE6;
+  color: #6C5E57;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.welfare-search-clear:hover {
+  background: #4B0B14;
+  color: #FFFFFF;
+}
+
+/* Filter Pills */
+.welfare-filter-pills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.welfare-filter-pill {
+  border: 1px solid #DFC994;
+  background: #FFFDFC;
+  border-radius: 9999px;
+  padding: 6px 16px;
+  cursor: pointer;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+.welfare-filter-pill .pill-en {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #4B0B14;
+}
+
+.welfare-filter-pill .pill-ta {
+  font-size: 11px;
+  color: #7A6961;
+}
+
+.welfare-filter-pill:hover {
+  border-color: #B08D57;
+  background: #FDF9F3;
+  transform: translateY(-1px);
+}
+
+.welfare-filter-pill.active {
+  background: linear-gradient(135deg, #610915 0%, #46060E 100%);
+  border-color: #D4AF37;
+  box-shadow: 0 4px 12px rgba(97, 9, 21, 0.25);
+}
+
+.welfare-filter-pill.active .pill-en {
+  color: #F8D98C;
+}
+
+.welfare-filter-pill.active .pill-ta {
+  color: #FFFFFF;
+  opacity: 0.9;
+}
+
+/* =====================================================================
+   CENTRAL TIMELINE SECTION ARCHITECTURE
+   ===================================================================== */
+.welfare-timeline-container {
+  max-width: 1360px;
+  margin: 45px auto 70px;
+  position: relative;
+  padding: 0 24px;
+}
+
+/* Golden Vertical Spine Line */
+.welfare-vertical-line {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 20px;
+  bottom: 20px;
+  width: 2px;
+  background: linear-gradient(180deg, #D4AF37 0%, #C99726 50%, #D4AF37 100%);
+  z-index: 1;
+}
+
+.welfare-timeline-list {
+  position: relative;
+  z-index: 2;
+}
+
+/* Each Timeline Row: Grid [Left 1fr] [Center 64px] [Right 1fr] */
+.welfare-timeline-row {
+  display: grid;
+  grid-template-columns: 1fr 64px 1fr;
+  align-items: center;
+  margin-bottom: 54px;
+  position: relative;
+}
+
+.timeline-col {
+  position: relative;
+}
+
+.col-left {
+  padding-right: 28px;
+}
+
+.col-right {
+  padding-left: 28px;
+}
+
+/* =====================================================================
+   CENTER NODE (MEDALLION & CONNECTOR LINE)
+   ===================================================================== */
+.timeline-center-node {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+
+.connector-connector-line {
+  position: absolute;
+  width: 58px;
+  height: 2px;
+  background: #D4AF37;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.node-medallion {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #8B1527 0%, #4A0811 100%);
+  border: 2px solid #D4AF37;
+  box-shadow: 0 0 0 5px #FBF8F3, 0 6px 14px rgba(74, 8, 17, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+.welfare-timeline-row:hover .node-medallion {
+  transform: scale(1.12);
+  border-color: #FFDE7A;
+  box-shadow: 0 0 0 6px #FBF8F3, 0 8px 18px rgba(74, 8, 17, 0.45);
+}
+
+.node-dot {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #D4AF37;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0 0 4px rgba(212, 175, 55, 0.8);
+  z-index: 2;
+}
+
+.dot-left {
+  left: -2px;
+}
+
+.dot-right {
+  right: -2px;
+}
+
+/* =====================================================================
+   ODD ROW STYLING (Left has Image + Details; Right has Description)
+   ===================================================================== */
+.odd-left-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  justify-content: flex-end;
+}
+
+.odd-right-wrapper {
+  max-width: 580px;
+}
+
+/* Sculpted Image Box for Odd Rows (image on left) */
+.welfare-image-box {
+  width: 225px;
+  height: 148px;
+  flex-shrink: 0;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  background: #ECE5DC;
+}
+
+.shape-odd {
+  border-radius: 20px 48px 16px 40px;
+  border-bottom: 3.5px solid #D4AF37;
+  border-left: 2px solid rgba(212, 175, 55, 0.4);
+}
+
+.shape-even {
+  border-radius: 48px 20px 40px 16px;
+  border-bottom: 3.5px solid #D4AF37;
+  border-right: 2px solid rgba(212, 175, 55, 0.4);
+}
+
+.welfare-image-box:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+.welfare-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.welfare-image-box:hover .welfare-card-img {
+  transform: scale(1.06);
+}
+
+/* Details in Odd Left Side */
+.welfare-info-block {
+  flex: 1;
+  max-width: 320px;
+}
+
+/* =====================================================================
+   EVEN ROW STYLING (Left has Details; Right has Description + Image)
+   ===================================================================== */
+.even-left-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  max-width: 540px;
+  margin-left: auto;
+}
+
+.even-right-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.even-right-text-col {
+  flex: 1;
+}
+
+/* =====================================================================
+   COMMON TYPOGRAPHY & ELEMENTS
+   ===================================================================== */
+.welfare-badge-row {
+  margin-bottom: 8px;
+}
+
+.welfare-badge-row.right-align {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.welfare-date-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #FFF7EC;
+  border: 1px solid #E8CD90;
+  color: #72202C;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 3px 12px;
+  border-radius: 9999px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.welfare-date-pill .cal-icon {
+  font-size: 12px;
+}
+
+/* Tamil Title */
+.welfare-item-title-ta {
+  font-family: 'Mukta Malar', 'Noto Serif Tamil', Georgia, serif;
+  font-size: 20px;
+  font-weight: 800;
+  color: #4B0B14;
+  line-height: 1.35;
+  margin: 0 0 3px;
+}
+
+.welfare-item-title-ta.right-align {
+  text-align: right;
+}
+
+/* English Subtitle */
+.welfare-item-title-en {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+  font-size: 13px;
+  color: #6E5346;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.welfare-item-title-en.right-align {
+  text-align: right;
+}
+
+/* Contribution Amount Badge Box */
+.welfare-contrib-pill-box {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #FFFFFF;
+  border: 1px solid #EAD8B5;
+  border-radius: 9999px;
+  padding: 3px 12px 3px 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.welfare-contrib-pill-box.right-align {
+  margin-left: auto;
+}
+
+.contrib-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #702619;
+}
+
+.contrib-badge {
+  background: linear-gradient(135deg, #FFE0B2 0%, #F5C26B 100%);
+  color: #4C1407;
+  font-weight: 800;
+  font-size: 14px;
+  padding: 3px 11px;
+  border-radius: 9999px;
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.7);
+  white-space: nowrap;
+}
+
+/* Full Tamil Description */
+.welfare-full-desc {
+  font-family: 'Mukta Malar', 'Noto Sans Tamil', -apple-system, sans-serif;
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: #2F2420;
+  margin: 0 0 10px;
+  text-align: justify;
+}
+
+/* Contributor Tag */
+.welfare-contributor-tag {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13.5px;
+  margin-bottom: 4px;
+}
+
+.contrib-head {
+  font-weight: 700;
+  color: #4B0B14;
+}
+
+.contrib-body {
+  font-weight: 800;
+  color: #8C1C2B;
+}
+
+/* Beneficiary Subtag */
+.welfare-recipient-subtag {
+  font-size: 12.5px;
+  color: #6C5B52;
+  line-height: 1.4;
+}
+
+.welfare-recipient-subtag strong {
+  color: #4B0B14;
+}
+
+/* Empty State */
+.welfare-timeline-empty {
+  text-align: center;
+  padding: 60px 20px;
+  background: #FFFDFC;
+  border-radius: 16px;
+  border: 1px dashed #DFC994;
+  margin: 40px auto;
+  max-width: 500px;
+}
+
+.welfare-reset-btn {
+  margin-top: 14px;
+  background: #610915;
+  color: #FFFFFF;
+  border: none;
+  padding: 8px 22px;
+  border-radius: 9999px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* =====================================================================
+   MISSION FOOTER BANNER
+   ===================================================================== */
+.welfare-journey-banner {
+  max-width: 1280px;
+  margin: 40px auto 0;
+  padding: 0 24px;
+}
+
+.journey-banner-inner {
+  background: linear-gradient(135deg, #4A0811 0%, #680E1C 50%, #4A0811 100%);
+  border-radius: 24px;
+  padding: 40px 32px;
+  text-align: center;
+  color: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(74, 8, 17, 0.22);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+}
+
+.journey-banner-badge {
+  display: inline-block;
+  background: rgba(212, 175, 55, 0.18);
+  border: 1px solid #D4AF37;
+  color: #F8D98C;
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  padding: 5px 16px;
+  border-radius: 9999px;
+  margin-bottom: 14px;
+}
+
+.journey-banner-title {
+  font-family: 'Mukta Malar', 'Noto Serif Tamil', serif;
+  font-size: clamp(22px, 2.4vw, 32px);
+  font-weight: 800;
+  color: #FFFFFF;
+  margin: 0 0 12px;
+  line-height: 1.35;
+}
+
+.journey-banner-desc {
+  max-width: 820px;
+  margin: 0 auto;
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+/* =====================================================================
+   RESPONSIVE DESIGN (Tablets & Mobile)
+   ===================================================================== */
+@media (max-width: 1080px) {
+  .welfare-timeline-container {
+    padding: 0 16px;
+  }
+  .welfare-timeline-row {
+    grid-template-columns: 1fr 50px 1fr;
+    margin-bottom: 48px;
+  }
+  .col-left {
+    padding-right: 18px;
+  }
+  .col-right {
+    padding-left: 18px;
+  }
+  .welfare-image-box {
+    width: 180px;
+    height: 130px;
+  }
+  .welfare-item-title-ta {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 900px) {
+  /* On mobile and small tablets, shift to vertical card timeline */
+  .welfare-vertical-line {
+    left: 28px;
+    transform: none;
+  }
+
+  .welfare-timeline-row {
+    display: flex;
+    flex-direction: column;
+    padding-left: 64px;
+    margin-bottom: 44px;
+    align-items: flex-start;
+  }
+
+  .timeline-center-node {
+    position: absolute;
+    left: 8px;
+    top: 0;
+  }
+
+  .timeline-col {
+    width: 100%;
+    padding: 0;
+  }
+
+  .col-left {
+    margin-bottom: 14px;
+  }
+
+  .odd-left-wrapper,
+  .even-right-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .even-left-wrapper {
+    align-items: flex-start;
+    text-align: left;
+    margin-left: 0;
+  }
+
+  .welfare-badge-row.right-align,
+  .welfare-item-title-ta.right-align,
+  .welfare-item-title-en.right-align,
+  .welfare-contrib-pill-box.right-align {
+    text-align: left;
+    justify-content: flex-start;
+    margin-left: 0;
+  }
+
+  .welfare-image-box {
+    width: 100%;
+    max-width: 320px;
+    height: 190px;
+  }
+
+  .shape-odd,
+  .shape-even {
+    border-radius: 20px 36px 16px 28px;
+  }
+
+  .welfare-info-block {
+    max-width: 100%;
+  }
+
+  .welfare-landmark-watermark {
+    width: 260px;
+    opacity: 0.12;
+  }
+}

@@ -1,0 +1,801 @@
+/* =====================================================================
+   FATIA ACTIVITIES & ENGAGEMENTS YEAR-WISE COLLAGE STYLING
+   High-end responsive collage / mosaic grid with interactive Lightbox
+   ===================================================================== */
+
+.activities-page-root {
+  background-color: #FBF8F3;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  padding-bottom: 70px;
+  font-family: 'Mukta Malar', 'Plus Jakarta Sans', -apple-system, sans-serif;
+}
+
+.activities-page-root button,
+.activities-page-root input,
+.activities-page-root span,
+.activities-page-root p,
+.activities-page-root div {
+  font-family: 'Mukta Malar', 'Plus Jakarta Sans', -apple-system, sans-serif;
+}
+
+/* =====================================================================
+   HERO HEADER & FILTER CONTROLS
+   ===================================================================== */
+.activities-hero-header {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 44px 24px 20px;
+  text-align: center;
+}
+
+.activities-top-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #FFF7EC;
+  border: 1px solid #E4C882;
+  color: #72202C;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 5px 18px;
+  border-radius: 9999px;
+  margin-bottom: 14px;
+  box-shadow: 0 2px 8px rgba(180, 140, 50, 0.08);
+}
+
+.badge-glow-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #D4AF37;
+  box-shadow: 0 0 6px #D4AF37;
+}
+
+.activities-main-heading {
+  font-family: 'Mukta Malar', Georgia, serif;
+  font-size: clamp(28px, 3.2vw, 44px);
+  font-weight: 800;
+  color: #4B0B14;
+  line-height: 1.25;
+  margin: 0 0 8px;
+  letter-spacing: -0.3px;
+}
+
+.activities-sub-heading-ta {
+  font-family: 'Mukta Malar', sans-serif;
+  font-size: 19px;
+  font-weight: 600;
+  color: #6C1E2B;
+  margin: 0 0 10px;
+}
+
+.activities-sub-heading-en {
+  max-width: 820px;
+  margin: 0 auto 30px;
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: #6A584F;
+}
+
+/* Dual Filter Controls Bar */
+.activities-controls-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+/* Activity Type Tabs */
+.activity-type-tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.type-tab-btn {
+  background: #FFFFFF;
+  border: 1.5px solid #DECBB3;
+  color: #4A3A34;
+  font-size: 13.5px;
+  font-weight: 700;
+  padding: 9px 20px;
+  border-radius: 9999px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.type-tab-btn:hover {
+  border-color: #B08D57;
+  transform: translateY(-1px);
+}
+
+.type-tab-btn.active {
+  background: #610915;
+  border-color: #D4AF37;
+  color: #F8D98C;
+  box-shadow: 0 4px 14px rgba(97, 9, 21, 0.22);
+}
+
+.type-count {
+  font-size: 12px;
+  opacity: 0.85;
+}
+
+.type-tab-btn.msme-tab.active {
+  background: linear-gradient(135deg, #7A2800 0%, #521600 100%);
+}
+
+.type-tab-btn.social-tab.active {
+  background: linear-gradient(135deg, #5B0612 0%, #3D030A 100%);
+}
+
+/* Year Pills */
+.activity-year-pills {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #FFFDFC;
+  border: 1px solid #E8D5B0;
+  border-radius: 9999px;
+  padding: 6px 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.year-pills-label {
+  font-size: 11px;
+  font-weight: 800;
+  color: #9C7722;
+  letter-spacing: 1px;
+  margin-right: 4px;
+}
+
+.year-pill-btn {
+  background: transparent;
+  border: none;
+  color: #6C5549;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 5px 14px;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.year-pill-btn:hover {
+  color: #4B0B14;
+  background: #F4ECE1;
+}
+
+.year-pill-btn.active {
+  background: #D4AF37;
+  color: #4B0B14;
+  font-weight: 800;
+  box-shadow: 0 2px 6px rgba(180, 140, 50, 0.3);
+}
+
+/* =====================================================================
+   YEAR-WISE COLLAGE GRID CONTAINER
+   ===================================================================== */
+.activities-collage-container {
+  max-width: 1340px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.year-collage-block {
+  margin-bottom: 60px;
+}
+
+/* Year Divider Banner */
+.year-divider-banner {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.year-badge-bubble {
+  background: linear-gradient(135deg, #610915 0%, #46060E 100%);
+  border: 1.5px solid #D4AF37;
+  color: #FFFFFF;
+  padding: 6px 18px;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 14px rgba(97, 9, 21, 0.2);
+}
+
+.bubble-year {
+  font-size: 18px;
+  font-weight: 800;
+  color: #FFDE7A;
+  font-family: Georgia, serif;
+}
+
+.bubble-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.year-divider-line {
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, #D4AF37 0%, rgba(212, 175, 55, 0.2) 80%, transparent 100%);
+}
+
+.year-summary-tag {
+  font-size: 13px;
+  font-weight: 600;
+  color: #8C7468;
+}
+
+/* =====================================================================
+   ASYMMETRIC COLLAGE MASONRY GRID
+   ===================================================================== */
+.collage-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 240px;
+  gap: 20px;
+}
+
+/* Collage Item Styles */
+.collage-item {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  border: 1.5px solid #E8DCCB;
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  background: #231613;
+}
+
+.collage-item:hover {
+  transform: translateY(-5px) scale(1.015);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.16);
+  border-color: #D4AF37;
+  z-index: 2;
+}
+
+/* Spans for Asymmetric Collage */
+.collage-item.collage-hero {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.collage-item.collage-wide {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.collage-item.collage-tall {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.collage-item.collage-square {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+/* Photo Frame inside Collage Item */
+.collage-photo-frame {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.collage-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.collage-item:hover .collage-photo-img {
+  transform: scale(1.08);
+}
+
+.collage-photo-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.2) 40%, rgba(20, 8, 10, 0.92) 100%);
+  transition: opacity 0.3s ease;
+}
+
+.collage-item:hover .collage-photo-overlay {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.3) 30%, rgba(20, 8, 10, 0.96) 100%);
+}
+
+/* Top Badges in Collage Card */
+.collage-top-badges {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  right: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  z-index: 3;
+}
+
+.activity-type-pill {
+  font-size: 11px;
+  font-weight: 800;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.activity-type-pill.pill-msme {
+  background: linear-gradient(135deg, #B54500 0%, #7D2E00 100%);
+  border: 1px solid #FFAB66;
+  color: #FFFFFF;
+}
+
+.activity-type-pill.pill-social {
+  background: linear-gradient(135deg, #7A0C1B 0%, #4D0610 100%);
+  border: 1px solid #D4AF37;
+  color: #FFDE7A;
+}
+
+.activity-date-pill {
+  background: rgba(0, 0, 0, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #FFFFFF;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 9999px;
+  backdrop-filter: blur(4px);
+}
+
+/* Bottom Caption in Collage Card */
+.collage-caption-box {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px 18px;
+  z-index: 3;
+  color: #FFFFFF;
+  transition: transform 0.3s ease;
+}
+
+.caption-title-ta {
+  font-family: 'Mukta Malar', Georgia, serif;
+  font-size: 16px;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin: 0 0 3px;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.collage-item.collage-hero .caption-title-ta {
+  font-size: 21px;
+}
+
+.caption-title-en {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0 0 8px;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.caption-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11.5px;
+  color: #E6D2B5;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 6px;
+  margin-top: 4px;
+}
+
+.caption-venue {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  max-width: 70%;
+}
+
+.caption-expand-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #FFDE7A;
+  font-weight: 700;
+}
+
+/* Empty State */
+.activities-empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  background: #FFFFFF;
+  border-radius: 16px;
+  border: 1px dashed #D4AF37;
+  max-width: 480px;
+  margin: 40px auto;
+}
+
+.reset-activity-btn {
+  margin-top: 12px;
+  background: #610915;
+  color: #FFFFFF;
+  border: none;
+  padding: 8px 22px;
+  border-radius: 9999px;
+  cursor: pointer;
+}
+
+/* =====================================================================
+   ACTIVITIES TEMPLATE PLACEHOLDER STATE (WHEN DATA IS EMPTY)
+   ===================================================================== */
+.activities-template-placeholder-section {
+  max-width: 1000px;
+  margin: 30px auto 40px;
+  padding: 0 24px;
+}
+
+.template-placeholder-card {
+  background: #FFFFFF;
+  border: 1.5px dashed #D4AF37;
+  border-radius: 28px;
+  padding: 50px 36px;
+  text-align: center;
+  box-shadow: 0 12px 36px rgba(97, 9, 21, 0.05);
+  position: relative;
+}
+
+.placeholder-icon-halo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #8B1527 0%, #4B0B14 100%);
+  border: 2px solid #D4AF37;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  box-shadow: 0 8px 24px rgba(75, 11, 20, 0.25);
+}
+
+.placeholder-badge {
+  display: inline-block;
+  background: #FFF7EC;
+  border: 1px solid #E4C882;
+  color: #72202C;
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 4px 16px;
+  border-radius: 9999px;
+  margin-bottom: 14px;
+}
+
+.placeholder-title-ta {
+  font-family: 'Mukta Malar', Georgia, serif;
+  font-size: 26px;
+  font-weight: 800;
+  color: #4B0B14;
+  margin: 0 0 4px;
+}
+
+.placeholder-title-en {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 16px;
+  color: #6C5549;
+  margin: 0 0 16px;
+}
+
+.placeholder-desc-ta {
+  font-family: 'Mukta Malar', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #72202C;
+  margin: 0 0 8px;
+}
+
+.placeholder-desc-en {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #55443D;
+  max-width: 680px;
+  margin: 0 auto 28px;
+}
+
+.placeholder-feature-pills {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.feat-pill {
+  background: #FAF6EF;
+  border: 1px solid #E8DCCB;
+  color: #4A3A34;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 9999px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+/* =====================================================================
+   TEMPLATE READY CALLOUT BANNER
+   ===================================================================== */
+.activities-upload-template-banner {
+  max-width: 1280px;
+  margin: 50px auto 20px;
+  padding: 0 24px;
+}
+
+.template-banner-inner {
+  background: #FFFFFF;
+  border: 1.5px dashed #D4AF37;
+  border-radius: 20px;
+  padding: 32px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+}
+
+.template-tag {
+  display: inline-block;
+  background: #FFF7EC;
+  border: 1px solid #E4C882;
+  color: #72202C;
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  padding: 4px 14px;
+  border-radius: 9999px;
+  margin-bottom: 10px;
+}
+
+.template-title {
+  font-family: 'Mukta Malar', Georgia, serif;
+  font-size: 21px;
+  font-weight: 800;
+  color: #4B0B14;
+  margin: 0 0 8px;
+}
+
+.template-desc {
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #6C5549;
+}
+
+/* =====================================================================
+   FULL-SCREEN LIGHTBOX MODAL
+   ===================================================================== */
+.activity-lightbox-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(8px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  animation: modalFadeIn 0.25s ease-out;
+}
+
+.activity-lightbox-dialog {
+  background: #FFFFFF;
+  border-radius: 24px;
+  max-width: 900px;
+  width: 100%;
+  max-height: 92vh;
+  overflow-y: auto;
+  position: relative;
+  border: 2px solid #D4AF37;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+}
+
+.lightbox-close-btn {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid #D4AF37;
+  color: #FFFFFF;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.2s ease;
+}
+
+.lightbox-close-btn:hover {
+  background: #610915;
+  color: #FFDE7A;
+  transform: scale(1.1);
+}
+
+.lightbox-photo-wrap {
+  width: 100%;
+  max-height: 460px;
+  background: #14080B;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-img {
+  width: 100%;
+  height: 100%;
+  max-height: 460px;
+  object-fit: cover;
+}
+
+.lightbox-info-pane {
+  padding: 28px 32px;
+}
+
+.lightbox-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+.lightbox-year-tag {
+  background: #FFF4E5;
+  border: 1px solid #EAC87D;
+  color: #72202C;
+  font-size: 12px;
+  font-weight: 800;
+  padding: 3px 12px;
+  border-radius: 9999px;
+}
+
+.lightbox-title-ta {
+  font-family: 'Mukta Malar', Georgia, serif;
+  font-size: 23px;
+  font-weight: 800;
+  color: #4B0B14;
+  line-height: 1.3;
+  margin: 0 0 4px;
+}
+
+.lightbox-title-en {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 15px;
+  color: #6C5549;
+  margin: 0 0 16px;
+}
+
+.lightbox-venue-bar {
+  background: #FAF7F2;
+  border: 1px solid #EEDFCA;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 13.5px;
+  color: #382B26;
+  margin-bottom: 16px;
+}
+
+.lightbox-venue-bar strong {
+  color: #72202C;
+}
+
+.lightbox-desc {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #4A3A34;
+  margin: 0 0 20px;
+}
+
+.lightbox-footer {
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid #E8DCCB;
+  padding-top: 16px;
+}
+
+.lightbox-close-action {
+  background: #610915;
+  color: #FFFFFF;
+  border: none;
+  padding: 9px 24px;
+  border-radius: 9999px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 13.5px;
+  transition: all 0.2s ease;
+}
+
+.lightbox-close-action:hover {
+  background: #7D1222;
+}
+
+/* =====================================================================
+   RESPONSIVE DESIGN FOR COLLAGE
+   ===================================================================== */
+@media (max-width: 1080px) {
+  .collage-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .collage-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+  }
+
+  .collage-item.collage-hero,
+  .collage-item.collage-wide,
+  .collage-item.collage-tall,
+  .collage-item.collage-square {
+    grid-column: span 1;
+    grid-row: span 1;
+    height: 280px;
+  }
+
+  .lightbox-info-pane {
+    padding: 20px;
+  }
+
+  .activity-type-tabs {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .type-tab-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+

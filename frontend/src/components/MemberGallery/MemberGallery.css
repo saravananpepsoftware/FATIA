@@ -1,56 +1,116 @@
-.member-gallery-container {
-  margin-top: 48px;
-  width: 100%;
-}
+/* ==========================================================================
+   MEMBER GALLERY - LUXURY STADIUM SHOWCASE
+   Recreating the prestigious FATIA Fair Highlights gallery design
+   ========================================================================== */
 
-.member-gallery-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 18px;
-}
-
-.member-gallery-title {
-  font-size: 1.35rem;
-  font-weight: 800;
-  color: var(--color-charcoal);
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.member-gallery-counter {
-  font-size: 0.88rem;
-  font-weight: 700;
-  color: var(--color-soft-gold-dark);
-  background-color: var(--color-soft-gold-light);
-  padding: 6px 14px;
-  border-radius: 20px;
-  letter-spacing: 0.03em;
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-
-/* Main Big Rectangle Carousel Stage */
-.carousel-main-stage {
+.member-gallery-luxury-wrapper {
   position: relative;
   width: 100%;
-  height: 500px;
-  border-radius: 24px;
-  overflow: hidden;
-  background-color: #12161A;
-  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.18);
+  max-width: 1320px;
+  margin: 10px auto 45px auto;
 }
 
-.carousel-image-wrapper {
+/* ==========================================================================
+   1. SECTION HEADER (SUBTITLE, LAUREL WREATHS, PLAYFAIR TITLE)
+   ========================================================================== */
+
+.member-gallery-header-luxury {
+  text-align: center;
+  margin-bottom: 26px;
+}
+
+.gallery-gold-subtitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.subtitle-rule-line {
+  width: 48px;
+  height: 1.5px;
+  background: linear-gradient(90deg, rgba(200, 155, 43, 0.2), #C89B2B);
+  display: inline-block;
+}
+
+.subtitle-rule-line:last-child {
+  background: linear-gradient(90deg, #C89B2B, rgba(200, 155, 43, 0.2));
+}
+
+.subtitle-text {
+  font-family: var(--font-primary, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: #B8860B;
+}
+
+.gallery-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+}
+
+.gallery-laurel-svg {
+  width: 44px;
+  height: 58px;
+  flex-shrink: 0;
+  filter: drop-shadow(0 2px 5px rgba(184, 134, 11, 0.28));
+  transition: transform 0.3s ease;
+}
+
+.gallery-laurel-svg.flip {
+  transform: scaleX(-1);
+}
+
+.gallery-main-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #500714;
+  margin: 0;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.gallery-title-year {
+  color: #C6922C;
+  font-style: italic;
+  font-weight: 800;
+  font-size: 1.1em;
+  margin: 0 4px;
+  display: inline-block;
+  text-shadow: 0 2px 6px rgba(198, 146, 44, 0.2);
+}
+
+/* ==========================================================================
+   2. MAIN CAROUSEL STADIUM CARD
+   ========================================================================== */
+
+.carousel-stadium-card {
+  position: relative;
+  width: 100%;
+  height: 540px;
+  border-radius: 40px;
+  border: 3.5px solid #F0D488;
+  box-shadow: 0 0 0 1px #D4A738, 0 20px 48px rgba(80, 7, 20, 0.12), 0 4px 16px rgba(198, 146, 44, 0.16);
+  background-color: #1A1F24;
+  overflow: visible;
+}
+
+.carousel-slides-viewport {
   position: relative;
   width: 100%;
   height: 100%;
+  border-radius: 36px;
   overflow: hidden;
 }
 
-/* Stacked Slides for Smooth Cross-Fade */
-.carousel-slide {
+/* Slide Transition Stack */
+.carousel-slide-luxury {
   position: absolute;
   top: 0;
   left: 0;
@@ -58,13 +118,13 @@
   height: 100%;
   opacity: 0;
   visibility: hidden;
+  transition: opacity 0.75s cubic-bezier(0.25, 1, 0.5, 1), transform 0.75s cubic-bezier(0.25, 1, 0.5, 1);
   transform: scale(1.02);
-  transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
   pointer-events: none;
   z-index: 1;
 }
 
-.carousel-slide.active {
+.carousel-slide-luxury.active {
   opacity: 1;
   visibility: visible;
   transform: scale(1);
@@ -72,7 +132,7 @@
   z-index: 2;
 }
 
-.carousel-big-image {
+.carousel-hero-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -80,10 +140,11 @@
   display: block;
 }
 
-.carousel-placeholder-stage {
+/* Placeholder Stage for missing images */
+.carousel-placeholder-hero {
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #1E262C 0%, #111518 100%);
+  background: linear-gradient(135deg, #242C33 0%, #15191D 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -93,117 +154,400 @@
 }
 
 .carousel-placeholder-icon {
-  width: 64px;
-  height: 64px;
-  color: var(--color-soft-gold);
+  width: 68px;
+  height: 68px;
+  color: #D4A738;
   margin-bottom: 14px;
+  opacity: 0.9;
 }
 
-.carousel-placeholder-title {
-  font-size: 1.1rem;
+.carousel-placeholder-label {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.25rem;
   font-weight: 700;
   color: #FFFFFF;
 }
 
-/* Bottom Caption Overlay Banner */
-.carousel-caption-overlay {
+/* ==========================================================================
+   TOP-RIGHT FLOATING PHOTO COUNTER BADGE
+   ========================================================================== */
+
+.carousel-photo-badge {
+  position: absolute;
+  top: 22px;
+  right: 26px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1.5px solid #E5C77A;
+  border-radius: 12px;
+  padding: 7px 16px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+
+.badge-camera-icon {
+  width: 17px;
+  height: 17px;
+  color: #500714;
+}
+
+.badge-text {
+  font-family: var(--font-primary, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #222222;
+  letter-spacing: 0.02em;
+}
+
+/* ==========================================================================
+   CIRCULAR NAVIGATION ARROWS (OVERLAPPING OUTER BORDER)
+   ========================================================================== */
+
+.carousel-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 15;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 1.5px solid #E6D7BD;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #500714;
+  padding: 0;
+  transition: all 0.24s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.carousel-nav-btn.prev {
+  left: -26px;
+}
+
+.carousel-nav-btn.next {
+  right: -26px;
+}
+
+.carousel-nav-btn:hover {
+  transform: translateY(-50%) scale(1.08);
+  border-color: #C89B2B;
+  color: #8C1328;
+  box-shadow: 0 8px 24px rgba(198, 146, 44, 0.32);
+}
+
+.carousel-nav-btn:active {
+  transform: translateY(-50%) scale(0.96);
+}
+
+.carousel-nav-btn svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* ==========================================================================
+   BOTTOM OVERLAY: LUXURY MAROON & GOLD RIBBON WAVE BANNER
+   ========================================================================== */
+
+.carousel-bottom-ribbon-overlay {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.92) 0%, rgba(0, 0, 0, 0.6) 65%, rgba(0, 0, 0, 0) 100%);
-  padding: 36px 28px 24px 28px;
-  display: flex;
-  align-items: flex-end;
+  height: 220px;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.carousel-ribbon-wave-svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   pointer-events: none;
 }
 
-.carousel-caption-text {
-  max-width: 80%;
+.carousel-caption-content {
+  position: absolute;
+  bottom: 26px;
+  left: 36px;
+  z-index: 6;
+  pointer-events: auto;
+  text-align: left;
 }
 
-.carousel-caption-badge {
+.carousel-caption-pill {
   display: inline-block;
-  font-size: 0.75rem;
+  background: linear-gradient(135deg, #F5D884 0%, #D4A738 50%, #C49129 100%);
+  color: #38040C;
+  font-family: var(--font-primary, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
+  font-size: 0.82rem;
   font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--color-soft-gold);
-  background: rgba(212, 175, 55, 0.18);
-  border: 1px solid rgba(212, 175, 55, 0.35);
-  padding: 4px 10px;
-  border-radius: 12px;
-  margin-bottom: 6px;
+  padding: 5px 16px;
+  border-radius: 20px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.24);
+  margin-bottom: 8px;
+  letter-spacing: 0.02em;
 }
 
 .carousel-caption-title {
-  color: #FFFFFF;
-  font-size: 1.15rem;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.15rem;
   font-weight: 700;
-  line-height: 1.35;
-  margin: 0;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  color: #FFFFFF;
+  margin: 0 0 10px 0;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.75);
+  line-height: 1.25;
 }
 
-/* Responsive Breakpoints */
+.carousel-caption-underline {
+  width: 72px;
+  height: 3.5px;
+  background: linear-gradient(90deg, #F3D279, #C89B2B);
+  border-radius: 2px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* ==========================================================================
+   3. BOTTOM THUMBNAIL PREVIEW NAVIGATION STRIP
+   ========================================================================== */
+
+.carousel-thumbnails-strip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+.carousel-thumb-item {
+  width: 152px;
+  height: 94px;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 0;
+  background: #1C2227;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  opacity: 0.82;
+  transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+  outline: none;
+}
+
+.carousel-thumb-item:hover:not(.active) {
+  opacity: 1;
+  transform: translateY(-2px) scale(1.02);
+  border-color: #E2BB55;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.14);
+}
+
+.carousel-thumb-item.active {
+  border: 3.5px solid #D4A738;
+  box-shadow: 0 6px 20px rgba(212, 167, 56, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.6) inset;
+  opacity: 1;
+  transform: scale(1.05);
+  z-index: 2;
+}
+
+.carousel-thumb-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.carousel-thumb-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #242B31;
+  color: #E5C77A;
+  font-size: 0.75rem;
+  font-weight: 700;
+  gap: 4px;
+}
+
+.carousel-thumb-icon {
+  width: 22px;
+  height: 22px;
+}
+
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+
+@media (max-width: 1200px) {
+  .carousel-stadium-card {
+    height: 480px;
+  }
+
+  .carousel-thumb-item {
+    width: 130px;
+    height: 82px;
+  }
+}
+
 @media (max-width: 992px) {
-  .carousel-main-stage {
-    height: 400px;
+  .gallery-main-title {
+    font-size: 1.95rem;
+  }
+
+  .gallery-laurel-svg {
+    width: 34px;
+    height: 46px;
+  }
+
+  .carousel-stadium-card {
+    height: 420px;
+    border-radius: 32px;
+  }
+
+  .carousel-slides-viewport {
+    border-radius: 28px;
+  }
+
+  .carousel-caption-title {
+    font-size: 1.75rem;
+  }
+
+  /* Keep navigation arrows slightly inside card on tablet to avoid clipping */
+  .carousel-nav-btn.prev {
+    left: 12px;
+  }
+
+  .carousel-nav-btn.next {
+    right: 12px;
+  }
+
+  .carousel-thumb-item {
+    width: 110px;
+    height: 70px;
+    border-radius: 12px;
   }
 }
 
 @media (max-width: 768px) {
-  .member-gallery-header {
-    gap: 12px;
-    align-items: flex-start;
-  }
-
-  .member-gallery-title {
-    font-size: 1.15rem;
-    line-height: 1.3;
-  }
-
-  .member-gallery-counter {
-    font-size: 0.78rem;
-    padding: 5px 12px;
-  }
-
-  .carousel-main-stage {
-    height: 320px;
-    border-radius: 18px;
-  }
-
-  .carousel-caption-title {
-    font-size: 0.95rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .member-gallery-header {
-    flex-wrap: nowrap;
-    align-items: flex-start;
+  .gallery-title-row {
     gap: 10px;
   }
 
-  .member-gallery-title {
-    font-size: 1.02rem;
-    line-height: 1.35;
+  .gallery-main-title {
+    font-size: 1.45rem;
   }
 
-  .member-gallery-counter {
-    font-size: 0.75rem;
-    padding: 4px 10px;
+  .gallery-laurel-svg {
+    width: 26px;
+    height: 36px;
   }
 
-  .carousel-main-stage {
-    height: 250px;
+  .subtitle-text {
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
   }
 
-  .carousel-caption-overlay {
-    padding: 16px 14px;
+  .carousel-stadium-card {
+    height: 300px;
+    border-radius: 24px;
+    border-width: 2.5px;
   }
 
-  .carousel-caption-badge {
-    font-size: 0.68rem;
+  .carousel-slides-viewport {
+    border-radius: 21px;
+  }
+
+  .carousel-photo-badge {
+    top: 14px;
+    right: 14px;
+    padding: 5px 12px;
+  }
+
+  .badge-camera-icon {
+    width: 14px;
+    height: 14px;
+  }
+
+  .badge-text {
+    font-size: 0.78rem;
+  }
+
+  .carousel-nav-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .carousel-nav-btn.prev {
+    left: 8px;
+  }
+
+  .carousel-nav-btn.next {
+    right: 8px;
+  }
+
+  .carousel-nav-btn svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .carousel-bottom-ribbon-overlay {
+    height: 160px;
+  }
+
+  .carousel-caption-content {
+    bottom: 16px;
+    left: 18px;
+  }
+
+  .carousel-caption-pill {
+    font-size: 0.72rem;
+    padding: 3px 12px;
+    margin-bottom: 4px;
+  }
+
+  .carousel-caption-title {
+    font-size: 1.25rem;
+    margin-bottom: 6px;
+  }
+
+  .carousel-caption-underline {
+    width: 50px;
+    height: 2.5px;
+  }
+
+  .carousel-thumbnails-strip {
+    gap: 10px;
+    margin-top: 16px;
+  }
+
+  .carousel-thumb-item {
+    width: 82px;
+    height: 54px;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-stadium-card {
+    height: 240px;
+  }
+
+  .gallery-main-title {
+    font-size: 1.2rem;
+  }
+
+  .carousel-thumb-item {
+    width: 62px;
+    height: 42px;
   }
 }

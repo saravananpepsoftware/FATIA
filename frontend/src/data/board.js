@@ -207,7 +207,7 @@ export const boardData = {
       termTitle: "FATIA 1st Term Board Members",
       members: [
         { name: "R.S. Nataraja Muthaliyar", position: "Founder President", positionTamil: "நிறுவனத் தலைவர்", image: "/assets/fair_committee/R.S. Nataraja Muthaliyar.jpg" },
-        { name: "C. Krishna Moorthy", position: "General Secretary", positionTamil: "பொதுச் செயலாளர்" },
+        { name: "C. Krishna Moorthy", position: "General Secretary", positionTamil: "பொதுச் செயலாளர்", image: "/assets/board/C.KrishnaMoorthy-GeneralSecretary.jpg" },
         { name: "A.K. Shanmuga Sundaram", position: "General Secretary", positionTamil: "பொதுச் செயலாளர்", image: "/assets/board/S.A.Shanmugasundaram-Vice President.jpg" },
         { name: "R.M. Devaraja", position: "Treasurer", positionTamil: "பொருளாளர்", image: "/assets/board/Mr.R.M.Devaraja.jpeg" }
       ]
@@ -216,14 +216,14 @@ export const boardData = {
       termTitle: "FATIA 2nd Term Board Members",
       members: [
         { name: "R.S. Nataraja Muthaliyar", position: "President", positionTamil: "தலைவர்", image: "/assets/fair_committee/R.S. Nataraja Muthaliyar.jpg" },
-        { name: "N. Sivanesan", position: "General Secretary", positionTamil: "பொதுச் செயலாளர்" },
+        { name: "N. Sivanesan", position: "General Secretary", positionTamil: "பொதுச் செயலாளர்", image: "/assets/board/N.Sivanesan.jpg" },
         { name: "R.M. Devaraja", position: "Treasurer", positionTamil: "பொருளாளர்", image: "/assets/board/Mr.R.M.Devaraja.jpeg" }
       ]
     },
     {
       termTitle: "FATIA 3rd Term Board Members",
       members: [
-        { name: "N. Sivanesan", position: "President", positionTamil: "தலைவர்" },
+        { name: "N. Sivanesan", position: "President", positionTamil: "தலைவர்", image: "/assets/board/N.Sivanesan.jpg" },
         { name: "T. Jagadeesan", position: "General Secretary", positionTamil: "பொதுச் செயலாளர்", image: "/assets/board/T.Jagadeesan-Immediate Past President.jpg" },
         { name: "V.K. Rajamanickam", position: "Treasurer", positionTamil: "பொருளாளர்", image: "/assets/board/V.K.Rajamanickam-President.jpg" }
       ]
@@ -231,7 +231,7 @@ export const boardData = {
     {
       termTitle: "FATIA 4th Term Board Members",
       members: [
-        { name: "N. Sivanesan", position: "President", positionTamil: "தலைவர்" },
+        { name: "N. Sivanesan", position: "President", positionTamil: "தலைவர்", image: "/assets/board/N.Sivanesan.jpg" },
         { name: "V.K. Rajamanickam", position: "General Secretary", positionTamil: "பொதுச் செயலாளர்", image: "/assets/board/V.K.Rajamanickam-President.jpg" },
         { name: "V.K. Kumarasamy", position: "Treasurer", positionTamil: "பொருளாளர்" }
       ]

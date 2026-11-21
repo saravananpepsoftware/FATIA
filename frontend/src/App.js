@@ -12,6 +12,9 @@ import Events from './pages/Events/Events';
 import Fair from './pages/Fair/Fair';
 import FairYearPage from './pages/FairYearPage/FairYearPage';
 import Contact from './pages/Contact/Contact';
+import SocialWelfare from './pages/SocialWelfare/SocialWelfare';
+import IndustrialSeminar from './pages/IndustrialSeminar/IndustrialSeminar';
+import Activities from './pages/Activities/Activities';
 import NotFound from './pages/NotFound/NotFound';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 import ExecutiveLoader from './components/ExecutiveLoader/ExecutiveLoader';
@@ -42,13 +45,19 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/members" element={<Members />} />
               <Route path="/members/honorary" element={<HonouraryMembers />} />
+              <Route path="/members/honourary" element={<HonouraryMembers />} />
               <Route path="/honorary-members" element={<HonouraryMembers />} />
+              <Route path="/honourary-members" element={<HonouraryMembers />} />
               <Route path="/board" element={<Board />} />
               <Route path="/board/past-terms" element={<PastTermsBoard />} />
               <Route path="/board/past" element={<PastTermsBoard />} />
+              <Route path="/past-terms" element={<PastTermsBoard />} />
               <Route path="/events" element={<Events />} />
               <Route path="/fair" element={<Fair />} />
               <Route path="/fair/:year" element={<FairYearPage />} />
+              <Route path="/social-welfare" element={<SocialWelfare />} />
+              <Route path="/industrial-seminar" element={<IndustrialSeminar />} />
+              <Route path="/activities" element={<Activities />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="*" element={<NotFound />} />
             </Routes>

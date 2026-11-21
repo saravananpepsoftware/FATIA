@@ -1,95 +1,499 @@
-.past-terms-filter-bar {
+@import url('https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@400;500;600;700;800&family=Noto+Sans+Tamil:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700&display=swap');
+
+/* ==========================================================================
+   FULL SCREEN PAGE CONTAINER OVERRIDE (NO BOXED WHITE CARDS)
+   ========================================================================== */
+
+.past-terms-page-container {
+  max-width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+}
+
+/* ==========================================================================
+   FULL SCREEN SHOWCASE CONTAINER WITH IVORY BACKGROUND
+   ========================================================================== */
+
+.past-terms-showcase-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: #FAF8F5;
+  background-image: radial-gradient(ellipse at 50% 10%, #FFFFFF 0%, #FAF7F1 45%, #F4ECE0 100%);
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0;
+  padding: 50px 0 100px 0;
+}
+
+/* ==========================================================================
+   CORNER RIBBONS (MAROON & POLISHED GOLD SWOOSHES)
+   ========================================================================== */
+
+.past-terms-ribbon-tl {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 380px;
+  height: 260px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.past-terms-ribbon-br {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 380px;
+  height: 260px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.past-terms-corner-ribbon-tl,
+.past-terms-corner-ribbon-br {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* ==========================================================================
+   DELICATE GUILLOCHE BACKGROUND CURVES
+   ========================================================================== */
+
+.past-terms-bg-waves-wrapper {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.past-terms-bg-waves {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* ==========================================================================
+   INNER CONTENT CONTAINER
+   ========================================================================== */
+
+.past-terms-showcase-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* ==========================================================================
+   LUXURY PAGE HEADER
+   ========================================================================== */
+
+.past-terms-header-luxury {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.past-terms-emblem-badge {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.past-terms-fatia-logo {
+  height: 64px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.12));
+}
+
+.past-terms-tag {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.past-terms-tag-pill {
+  font-family: var(--font-primary, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #8C5A14;
+  background: #FFF9ED;
+  border: 1px solid #E5C77A;
+  padding: 5px 18px;
+  border-radius: 20px;
+  box-shadow: 0 2px 6px rgba(184, 134, 11, 0.1);
+}
+
+.past-terms-page-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.35rem;
+  font-weight: 800;
+  color: #550715;
+  letter-spacing: -0.01em;
+  margin: 0 0 10px 0;
+}
+
+.past-terms-page-subtitle {
+  font-family: var(--font-primary, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
+  font-size: 0.98rem;
+  color: #5C6269;
+  max-width: 700px;
+  margin: 0 auto 16px auto;
+  line-height: 1.5;
+}
+
+.past-terms-gold-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 0 auto;
+  max-width: 240px;
+}
+
+.gold-div-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+}
+
+.gold-div-star {
+  color: #C89B2B;
+  font-size: 0.75rem;
+}
+
+/* ==========================================================================
+   FILTER PILLS BAR
+   ========================================================================== */
+
+.past-terms-filter-bar-luxury {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
-  margin-bottom: 44px;
+  gap: 10px;
+  margin: 24px 0 55px 0;
 }
 
-.past-term-filter-btn {
-  background-color: var(--color-white);
-  border: 1px solid var(--color-light-beige);
-  color: var(--color-slate-gray);
-  padding: 10px 18px;
-  border-radius: 30px;
-  font-size: 0.88rem;
+.past-term-filter-pill {
+  font-family: var(--font-primary, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
+  font-size: 0.85rem;
   font-weight: 600;
+  color: #550715;
+  background: #FFFFFF;
+  border: 1px solid #E2C787;
+  padding: 8px 18px;
+  border-radius: 24px;
   cursor: pointer;
-  transition: all var(--transition-fast);
+  transition: all 0.22s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
 }
 
-.past-term-filter-btn:hover {
-  border-color: var(--color-soft-gold);
-  color: var(--color-soft-gold);
+.past-term-filter-pill:hover {
+  background: #FFF9ED;
+  border-color: #C89B2B;
+  transform: translateY(-1px);
 }
 
-.past-term-filter-btn.active {
-  background: var(--gradient-gold-primary);
-  color: var(--color-white);
-  border-color: transparent;
-  box-shadow: 0 4px 12px rgba(176, 141, 87, 0.25);
+.past-term-filter-pill.active {
+  background: linear-gradient(135deg, #700B1A 0%, #4D0612 100%);
+  color: #FFFFFF;
+  border-color: #8C1328;
+  box-shadow: 0 4px 14px rgba(77, 6, 18, 0.28);
 }
 
-.past-terms-list {
+/* ==========================================================================
+   TERM SECTIONS
+   ========================================================================== */
+
+.past-terms-list-luxury {
   display: flex;
   flex-direction: column;
-  gap: 48px;
+  gap: 75px;
 }
 
-.past-term-card-section {
-  background-color: var(--color-white);
-  border: 1px solid var(--color-light-beige);
-  border-radius: var(--radius-xl);
-  padding: 32px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+.past-term-section-luxury {
+  position: relative;
+  width: 100%;
 }
 
-.past-term-banner {
-  border-bottom: 1px solid var(--color-light-beige);
-  padding-bottom: 20px;
-  margin-bottom: 28px;
+.past-term-header-luxury {
+  margin-bottom: 34px;
+  text-align: left;
 }
 
-.past-term-number-badge {
+.past-term-num-badge {
   display: inline-block;
-  font-size: 0.78rem;
+  font-family: var(--font-primary, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
+  font-size: 0.72rem;
   font-weight: 800;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--color-soft-gold);
-  background-color: var(--color-soft-gold-light);
+  color: #9A6516;
+  background: #FFF9ED;
+  border: 1px solid #E5C77A;
   padding: 4px 14px;
-  border-radius: 12px;
+  border-radius: 14px;
   margin-bottom: 10px;
 }
 
-.past-term-banner-title {
-  font-size: 1.6rem;
+.past-term-title-luxury {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.75rem;
   font-weight: 800;
-  color: var(--color-charcoal);
-  margin-bottom: 6px;
+  color: #550715;
+  margin: 0 0 6px 0;
+  letter-spacing: -0.01em;
 }
 
-.past-term-banner-desc {
+.past-term-desc-luxury {
+  font-family: var(--font-primary, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
+  font-size: 0.92rem;
+  color: #5A6066;
+  margin: 0 0 12px 0;
+  line-height: 1.45;
+}
+
+.past-term-underline {
+  width: 65px;
+  height: 3px;
+  background: #700B1A;
+  border-radius: 2px;
+}
+
+/* ==========================================================================
+   CONNECTED HORIZONTAL TIMELINE ROW & MEMBERS
+   ========================================================================== */
+
+.past-term-row-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.past-term-row-wrapper.count-4 {
+  max-width: 1340px;
+}
+
+.past-term-row-wrapper.count-3 {
+  max-width: 1040px;
+}
+
+/* Member Medallion Card */
+.past-term-member-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 250px;
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+.past-term-member-card:hover {
+  transform: translateY(-3px);
+}
+
+.past-term-avatar-frame {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.past-term-avatar-circle {
+  position: absolute;
+  width: 138px;
+  height: 138px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.16);
+  border: 3px solid #D8AF44;
+  background: #FFFFFF;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.past-term-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 15%;
+  display: block;
+}
+
+.past-term-avatar-placeholder {
+  position: absolute;
+  width: 138px;
+  height: 138px;
+  border-radius: 50%;
+  background: #F4EFE5;
+  border: 3px solid #D8AF44;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.past-term-placeholder-icon {
+  width: 62px;
+  height: 62px;
+  color: #A88647;
+  opacity: 0.85;
+}
+
+.past-term-arcs-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 180px;
+  height: 180px;
+  z-index: 2;
+  pointer-events: none;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.2));
+}
+
+.past-term-member-name {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: #550715;
+  margin: 16px 0 4px 0;
+  line-height: 1.3;
+}
+
+.past-term-member-designation {
+  font-family: 'Noto Sans Tamil', 'Mukta Malar', 'Tamil Sangam MN', sans-serif;
   font-size: 0.95rem;
-  color: var(--color-slate-gray);
-  margin: 0;
+  font-weight: 600;
+  color: #2D3136;
+  line-height: 1.35;
+  display: block;
 }
 
-.past-term-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 20px;
+.past-term-gold-dash {
+  width: 38px;
+  height: 2.5px;
+  background: #C89B2B;
+  border-radius: 2px;
+  margin: 9px auto 0 auto;
 }
 
-@media (max-width: 768px) {
-  .past-term-card-section {
-    padding: 20px 16px;
+/* ==========================================================================
+   HORIZONTAL TIMELINE CONNECTOR BETWEEN MEDALLIONS
+   ========================================================================== */
+
+.past-term-connector {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 89px; /* Precisely centers with 180px avatar frame height */
+  min-width: 30px;
+  max-width: 150px;
+  height: 12px;
+  z-index: 0;
+}
+
+.past-term-connector-line {
+  flex: 1;
+  height: 1.5px;
+  background: linear-gradient(90deg, #D4AF37, #E9C465);
+  opacity: 0.85;
+}
+
+.past-term-connector-dot {
+  width: 9px;
+  height: 9px;
+  background: #C89B2B;
+  border-radius: 50%;
+  box-shadow: 0 0 7px rgba(200, 155, 43, 0.6);
+  margin: 0 2px;
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   RESPONSIVE LAYOUT
+   ========================================================================== */
+
+@media (max-width: 1140px) {
+  .past-term-row-wrapper {
+    flex-wrap: wrap;
+    gap: 40px 24px;
+    justify-content: center;
   }
-  .past-term-banner-title {
-    font-size: 1.3rem;
+
+  .past-term-connector {
+    display: none;
   }
-  .past-term-grid {
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+
+  .past-term-member-card {
+    width: calc(50% - 24px);
+    max-width: 270px;
+  }
+}
+
+@media (max-width: 600px) {
+  .past-terms-showcase-container {
+    padding: 36px 0 70px 0;
+  }
+
+  .past-terms-showcase-inner {
+    padding: 0 20px;
+  }
+
+  .past-terms-page-title {
+    font-size: 1.85rem;
+  }
+
+  .past-term-title-luxury {
+    font-size: 1.45rem;
+  }
+
+  .past-term-member-card {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  .past-term-avatar-frame {
+    width: 156px;
+    height: 156px;
+  }
+
+  .past-term-avatar-circle,
+  .past-term-avatar-placeholder {
+    width: 120px;
+    height: 120px;
+  }
+
+  .past-term-arcs-svg {
+    width: 156px;
+    height: 156px;
+  }
+
+  .past-terms-ribbon-tl,
+  .past-terms-ribbon-br {
+    width: 220px;
+    height: 150px;
   }
 }
