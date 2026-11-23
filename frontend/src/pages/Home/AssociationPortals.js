@@ -369,49 +369,76 @@ const AssociationPortals = () => {
         </div>
       </div>
 
-      {/* Bottom Flowing Silk Ribbon Waves */}
+      {/* Bottom Flowing Silk Ribbon Waves (Seamless Full-Width Flow) */}
       <div className="portals-bottom-waves" aria-hidden="true">
-        <svg viewBox="0 0 1440 160" preserveAspectRatio="none" className="portals-waves-svg">
+        <svg viewBox="0 0 1440 200" preserveAspectRatio="none" className="portals-waves-svg">
+          <defs>
+            <linearGradient id="portalMaroonGrad" x1="0%" y1="0%" x2="100%" y2="50%">
+              <stop offset="0%" stopColor="#4A020E" />
+              <stop offset="25%" stopColor="#6E0B22" />
+              <stop offset="65%" stopColor="#550418" />
+              <stop offset="100%" stopColor="#38020F" />
+            </linearGradient>
+            <linearGradient id="portalShadowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="#2A0108" stopOpacity="0.85" />
+              <stop offset="50%" stopColor="#3B020F" stopOpacity="0.95" />
+              <stop offset="100%" stopColor="#250106" stopOpacity="0.8" />
+            </linearGradient>
+            <linearGradient id="portalGoldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="#C5964E" stopOpacity="0.35" />
+              <stop offset="35%" stopColor="#F9E29D" stopOpacity="0.9" />
+              <stop offset="70%" stopColor="#D4AF37" stopOpacity="0.8" />
+              <stop offset="100%" stopColor="#B3862D" stopOpacity="0.45" />
+            </linearGradient>
+          </defs>
+
+          {/* Deep Maroon Flowing Silk Ribbon - Full Width Organic Flow */}
           <path
-            d="M600 160 C850 110, 1050 140, 1250 80 C1340 50, 1400 70, 1440 100 L1440 160 L600 160 Z"
+            d="M -60 125 C 160 162, 420 172, 700 135 C 980 98, 1220 68, 1500 82 L 1500 152 C 1240 132, 1000 155, 720 188 C 440 218, 180 198, -60 162 Z"
             fill="url(#portalMaroonGrad)"
           />
+
+          {/* Secondary Maroon Dark Shadow Fold */}
           <path
-            d="M850 160 C1020 115, 1220 135, 1440 70 L1440 160 L850 160 Z"
-            fill="#3B020F"
-            opacity="0.9"
+            d="M -60 142 C 180 178, 460 186, 760 150 C 1060 112, 1280 88, 1500 105 L 1500 162 C 1280 142, 1060 165, 760 198 C 460 225, 180 208, -60 175 Z"
+            fill="url(#portalShadowGrad)"
           />
+
+          {/* Golden Silk Wave Strand sweeping along the upper contour */}
           <path
-            d="M-40 120 C120 145, 260 155, 460 125 C640 95, 800 115, 960 145 L940 160 L-40 160 Z"
+            d="M -60 102 C 150 140, 380 152, 640 118 C 900 82, 1180 62, 1500 75 C 1180 88, 900 110, 640 142 C 380 172, 150 158, -60 120 Z"
             fill="url(#portalGoldGrad)"
           />
+
+          {/* Shimmering Golden Sinusoidal Frequency Wave Strands */}
           <path
-            d="M-30 110 Q220 155, 460 120 T960 130 T1440 95"
+            d="M -50 90 C 180 138, 440 158, 720 118 C 1000 78, 1250 58, 1490 70"
             fill="none"
             stroke="#D4AF37"
-            strokeWidth="1.6"
+            strokeWidth="1.8"
+            opacity="0.8"
+          />
+          <path
+            d="M -50 98 C 190 146, 450 166, 730 126 C 1010 86, 1260 66, 1490 78"
+            fill="none"
+            stroke="#FFECA8"
+            strokeWidth="1.2"
             opacity="0.65"
           />
           <path
-            d="M-30 118 Q220 163, 470 128 T970 138 T1440 103"
+            d="M -50 108 C 200 154, 460 174, 740 134 C 1020 94, 1270 74, 1490 86"
             fill="none"
-            stroke="#FFECA8"
-            strokeWidth="1.1"
+            stroke="#D4AF37"
+            strokeWidth="1"
             opacity="0.5"
           />
-
-          <defs>
-            <linearGradient id="portalMaroonGrad" x1="0%" y1="0%" x2="100%" y2="50%">
-              <stop offset="0%" stopColor="#6E0B22" />
-              <stop offset="60%" stopColor="#550418" />
-              <stop offset="100%" stopColor="#3F0211" />
-            </linearGradient>
-            <linearGradient id="portalGoldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#C5964E" stopOpacity="0.25" />
-              <stop offset="50%" stopColor="#F9E29D" stopOpacity="0.8" />
-              <stop offset="100%" stopColor="#B3862D" stopOpacity="0.35" />
-            </linearGradient>
-          </defs>
+          <path
+            d="M 420 150 C 700 115, 1020 92, 1320 105 T 1490 110"
+            fill="none"
+            stroke="#FCEAB3"
+            strokeWidth="1"
+            opacity="0.55"
+          />
         </svg>
       </div>
     </section>

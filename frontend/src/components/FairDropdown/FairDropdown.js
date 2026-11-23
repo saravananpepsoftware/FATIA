@@ -15,7 +15,7 @@ const FairDropdown = ({ onItemClick }) => {
           }
           onClick={onItemClick}
         >
-          {year} Fair
+          <span>{year} Fair</span>
         </NavLink>
       ))}
     </div>

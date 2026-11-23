@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { NavLink, Link, useLocation, useNavigate } from 'react-router-dom';
+import React, { useState } from 'react';
+import { NavLink, Link, useLocation } from 'react-router-dom';
 import MembersDropdown from '../MembersDropdown/MembersDropdown';
 import MobileMembersMenu from '../MobileMembersMenu/MobileMembersMenu';
 import BoardDropdown from '../BoardDropdown/BoardDropdown';
@@ -11,7 +11,6 @@ import './Header.css';
 const navItemsList = [
   { label: 'Home', route: '/' },
   { label: 'About Us', route: '/about' },
-  { label: 'Social Welfare', route: '/social-welfare' },
   { label: 'Members', route: '/members', hasDropdown: true, dropdownType: 'members' },
   { label: 'Board', route: '/board', hasDropdown: true, dropdownType: 'board' },
   { label: 'Fair', route: '/fair', hasDropdown: true, dropdownType: 'fair' },
@@ -23,32 +22,13 @@ const Header = () => {
   const [showBoardDropdown, setShowBoardDropdown] = useState(false);
   const [showFairDropdown, setShowFairDropdown] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [searchOpen, setSearchOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
-  const searchInputRef = useRef(null);
 
   const location = useLocation();
-  const navigate = useNavigate();
 
   const isMembersActive =
     location.pathname.startsWith('/members') || location.pathname.includes('honorary');
   const isBoardActive = location.pathname.startsWith('/board');
   const isFairActive = location.pathname.startsWith('/fair');
-
-  useEffect(() => {
-    if (searchOpen && searchInputRef.current) {
-      searchInputRef.current.focus();
-    }
-  }, [searchOpen]);
-
-  const handleSearchSubmit = (e) => {
-    e.preventDefault();
-    if (searchQuery.trim()) {
-      navigate(`/members?search=${encodeURIComponent(searchQuery.trim())}`);
-      setSearchOpen(false);
-      setSearchQuery('');
-    }
-  };
 
   return (
     <header className="header-root">
@@ -70,9 +50,11 @@ const Header = () => {
           <div className="header-brand-text">
             <div className="header-brand-top-row">
               <span className="header-brand-title">FATIA</span>
-              <span className="header-brand-meta-text">
-                Since 1999, Reg No: 86/99
-              </span>
+              <div className="header-brand-meta-text">
+                <span className="header-meta-since">Since 1999</span>
+                <span className="header-meta-sep">,</span>
+                <span className="header-meta-reg">Reg No: 86/99</span>
+              </div>
             </div>
             <span className="header-brand-sub">
               FEDERATION OF ALL TRADE &amp; INDUSTRY<br />ASSOCIATIONS OF ERODE DISTRICT
@@ -246,34 +228,6 @@ const Header = () => {
               );
             })}
           </div>
-
-          {/* Right Action Group: Vertical Line + Search */}
-          <div className="nav-actions-group">
-            <div className="nav-sep-line" />
-
-            {/* Search Button */}
-            <button
-              type="button"
-              className={`nav-search-btn ${searchOpen ? 'active' : ''}`}
-              title="Search Directory"
-              aria-label="Search Directory"
-              onClick={() => setSearchOpen(!searchOpen)}
-            >
-              <svg
-                width="17"
-                height="17"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.4"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <circle cx="11" cy="11" r="8" />
-                <line x1="21" y1="21" x2="16.65" y2="16.65" />
-              </svg>
-            </button>
-          </div>
         </nav>
 
         {/* Mobile Hamburger Toggle Button */}
@@ -294,45 +248,6 @@ const Header = () => {
           )}
         </button>
       </div>
-
-      {/* Expandable Search Modal/Bar */}
-      {searchOpen && (
-        <div className="navbar-search-overlay">
-          <form className="navbar-search-form" onSubmit={handleSearchSubmit}>
-            <svg
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#D4AF37"
-              strokeWidth="2.2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <circle cx="11" cy="11" r="8" />
-              <line x1="21" y1="21" x2="16.65" y2="16.65" />
-            </svg>
-            <input
-              ref={searchInputRef}
-              type="text"
-              className="navbar-search-input"
-              placeholder="Search member, association, or company..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-            />
-            <button type="submit" className="navbar-search-submit">
-              Search
-            </button>
-            <button
-              type="button"
-              className="navbar-search-close"
-              onClick={() => setSearchOpen(false)}
-            >
-              ✕
-            </button>
-          </form>
-        </div>
-      )}
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
@@ -358,17 +273,6 @@ const Header = () => {
             }}
           >
             About Us
-          </NavLink>
-
-          <NavLink
-            to="/social-welfare"
-            className={({ isActive }) => `mobile-drawer-link ${isActive ? 'active' : ''}`}
-            onClick={() => {
-              setMobileMenuOpen(false);
-              window.scrollTo({ top: 0, behavior: 'smooth' });
-            }}
-          >
-            Social Welfare
           </NavLink>
 
           <MobileMembersMenu

@@ -1,165 +1,437 @@
+/* =====================================================================
+   FATIA LUXURY EXECUTIVE FOOTER - EXACT 1:1 REPLICATION OF OFFICIAL DESIGN
+   Warm Ivory Body • Clock Tower Watermark • Sweeping Golden Wave
+   ===================================================================== */
+
 .footer-root {
-  background-color: var(--color-charcoal);
-  color: #E0E0E0;
-  border-top: 3px solid var(--color-soft-gold);
-  padding: 60px 0 30px 0;
+  background-color: #FFFDF9;
+  position: relative;
+  overflow: hidden;
+  margin-top: auto;
+  border-top: none;
+  font-family: 'Mukta Malar', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #2E1E1A;
+}
+
+/* Decorative Top-Left Gold Curves */
+.footer-top-left-curves {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 420px;
+  height: 140px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.footer-top-curves-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Main Content Container */
+.footer-main-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 48px 28px 36px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Right Background Landmark Sketch Watermark */
+.footer-landmark-bg {
+  position: absolute;
+  right: 1.5%;
+  bottom: 0px;
+  width: 250px;
+  height: auto;
+  pointer-events: none;
+  opacity: 0.18;
+  z-index: 1;
+}
+
+.footer-landmark-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  filter: sepia(0.4) contrast(1.1);
+}
+
+/* 3-Column Top Grid */
+.footer-columns-grid {
+  display: grid;
+  grid-template-columns: 1.8fr 1.15fr 1.45fr;
+  gap: 52px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Column 1: Brand Info */
+.footer-brand-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-brand-lockup {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  margin-bottom: 20px;
+  transition: opacity 0.2s ease;
+}
+
+.footer-brand-lockup:hover {
+  opacity: 0.94;
+}
+
+.footer-logo-circle {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #D4AF37;
+  box-shadow: 0 4px 14px rgba(75, 11, 20, 0.14);
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.footer-logo-img {
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+}
+
+.footer-logo-divider {
+  width: 1.4px;
+  height: 44px;
+  background: #E5D7C3;
+  flex-shrink: 0;
+}
+
+.footer-brand-text-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-fatia-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-fatia-name {
+  font-family: 'Mukta Malar', Georgia, serif;
+  font-size: 1.75rem;
+  font-weight: 900;
+  color: #4A050F;
+  letter-spacing: 0.03em;
+  line-height: 1;
+}
+
+.footer-regd-badge {
+  background: linear-gradient(135deg, #F8DB96 0%, #E6BF68 100%);
+  color: #5A3902;
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  padding: 3px 11px;
+  border-radius: 9999px;
+  border: 1px solid rgba(217, 164, 47, 0.4);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  white-space: nowrap;
+}
+
+.footer-fatia-sub {
+  font-size: 0.58rem;
+  font-weight: 800;
+  color: #523F3A;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  line-height: 1.28;
+  margin-top: 4px;
+}
+
+.footer-association-titles {
+  margin-bottom: 24px;
+}
+
+.footer-title-en {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #23120E;
+  line-height: 1.34;
+  margin: 0 0 6px;
+  letter-spacing: -0.2px;
+}
+
+.footer-title-ta {
+  font-family: 'Mukta Malar', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #A6681E;
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* Follow Us Row */
+.footer-follow-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
   margin-top: auto;
 }
 
-.footer-container {
-  max-width: 1240px;
-  margin: 0 auto;
-  padding: 0 24px;
+.footer-follow-label {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #1F110D;
 }
 
-.footer-top-grid {
-  display: grid;
-  grid-template-columns: 2fr 1.2fr 1.2fr;
-  gap: 40px;
-  margin-bottom: 40px;
+.footer-social-pills {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
-.footer-about-col {
+.footer-social-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 18px;
+  border-radius: 9999px;
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: #FFFFFF !important;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.footer-social-pill:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.08);
+}
+
+.footer-social-pill.pill-facebook {
+  background: #1877F2;
+}
+
+.footer-social-pill.pill-instagram {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+/* Column 2 & 3 Headings */
+.footer-column-heading {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #38050D;
+  margin: 0;
+  letter-spacing: -0.2px;
+}
+
+.footer-heading-underline {
+  width: 38px;
+  height: 3px;
+  background: #C89222;
+  border-radius: 2px;
+  margin: 6px 0 20px;
+}
+
+/* Column 2: Quick Links */
+.footer-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.footer-nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #2E1E1A;
+  font-size: 0.94rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.footer-chevron {
+  color: #9E1B2D;
+  font-weight: 800;
+  font-size: 0.88rem;
+  transition: transform 0.2s ease;
+}
+
+.footer-nav-link:hover {
+  color: #8B1527;
+  transform: translateX(4px);
+}
+
+.footer-nav-link:hover .footer-chevron {
+  color: #C89222;
+  transform: translateX(2px);
+}
+
+/* Column 3: Contact Stack */
+.footer-contact-stack {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-.footer-root .logo-title {
-  color: #FFFFFF !important;
-}
-
-.footer-about-description {
-  color: #CCCCCC;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  max-width: 460px;
-}
-
-.footer-social-wrapper {
+.footer-contact-row {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-top: 4px;
+  gap: 14px;
 }
 
-.footer-social-label {
-  font-size: 0.88rem;
+.footer-contact-icon-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: #F7EAE8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid rgba(108, 13, 26, 0.08);
+}
+
+.footer-contact-text {
+  font-size: 0.90rem;
+  line-height: 1.5;
+  color: #2E1E1A;
+}
+
+.footer-contact-text strong {
+  color: #1A0F0D;
   font-weight: 700;
-  color: #FFFFFF;
-  letter-spacing: 0.04em;
 }
 
-.footer-social-btns {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.footer-social-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 16px;
-  border-radius: 20px;
-  font-size: 0.82rem;
-  font-weight: 600;
-  color: #FFFFFF;
-  border: none;
-  transition: all var(--transition-fast);
+.footer-phone-link,
+.footer-email-link {
+  color: inherit;
   text-decoration: none;
+  transition: color 0.2s ease;
 }
 
-.footer-social-btn.facebook {
-  background-color: #1877F2;
-  box-shadow: 0 4px 12px rgba(24, 119, 242, 0.3);
+.footer-phone-link:hover,
+.footer-email-link:hover {
+  color: #8B1527;
+  text-decoration: underline;
 }
 
-.footer-social-btn.facebook:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(24, 119, 242, 0.45);
-  filter: brightness(1.08);
-}
-
-.footer-social-btn.instagram {
-  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-  box-shadow: 0 4px 12px rgba(220, 39, 67, 0.3);
-}
-
-.footer-social-btn.instagram:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(220, 39, 67, 0.45);
-  filter: brightness(1.08);
-}
-
-.footer-heading {
-  font-size: 1rem;
-  font-weight: 700;
-  color: #FFFFFF;
-  margin-bottom: 16px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+/* =====================================================================
+   BOTTOM SWEEPING WAVE & COPYRIGHT BAR
+   ===================================================================== */
+.footer-bottom-wave-wrapper {
   position: relative;
+  width: 100%;
+  margin-top: 10px;
+  background: linear-gradient(90deg, #3C020A 0%, #540512 30%, #690918 70%, #45020B 100%);
 }
 
-.footer-heading::after {
-  content: '';
+.footer-bottom-wave-svg {
+  position: absolute;
+  top: -58px;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.footer-left-arcs {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 400px;
+  height: 110px;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.footer-arcs-svg {
+  width: 100%;
+  height: 100%;
   display: block;
-  width: 28px;
-  height: 2px;
-  background-color: var(--color-soft-gold);
-  margin-top: 6px;
 }
 
-.footer-links-list {
-  list-style: none;
+.footer-copyright-content {
+  position: relative;
+  z-index: 4;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 18px 28px 22px;
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.footer-link-item {
-  color: #CCCCCC;
-  font-size: 0.92rem;
-  transition: color var(--transition-fast);
-}
-
-.footer-link-item:hover,
-.footer-link-item.active {
-  color: var(--color-soft-gold);
-}
-
-.footer-contact-info {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  font-size: 0.92rem;
-  color: #CCCCCC;
-}
-
-.footer-contact-info a:hover {
-  color: var(--color-soft-gold) !important;
-}
-
-.footer-bottom-bar {
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
-  padding-top: 24px;
-  display: flex;
-  justify-content: space-between;
   align-items: center;
-  font-size: 0.85rem;
-  color: #A0A0A0;
+  justify-content: space-between;
+  color: #FFFFFF;
+  font-size: 0.86rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.footer-copy-left {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.footer-copy-divider {
+  color: #E5B84B;
+  font-weight: 600;
+  opacity: 0.75;
+  margin: 0 12px;
+}
+
+.footer-copy-right {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* =====================================================================
+   RESPONSIVE DESIGN
+   ===================================================================== */
+@media (max-width: 1080px) {
+  .footer-columns-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  .footer-admin-col {
+    grid-column: span 2;
+  }
 }
 
 @media (max-width: 768px) {
-  .footer-top-grid {
+  .footer-columns-grid {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 34px;
   }
-
-  .footer-bottom-bar {
+  .footer-admin-col {
+    grid-column: span 1;
+  }
+  .footer-landmark-bg {
+    width: 180px;
+    opacity: 0.12;
+  }
+  .footer-copyright-content {
     flex-direction: column;
-    gap: 12px;
+    gap: 8px;
     text-align: center;
+    padding-bottom: 24px;
+  }
+  .footer-copy-divider {
+    display: none;
+  }
+  .footer-bottom-wave-svg {
+    top: -38px;
+    height: 40px;
   }
 }

@@ -162,15 +162,23 @@ const HeroOrbitSection = () => {
           </linearGradient>
 
           <linearGradient id="maroonWaveGradient" x1="0%" y1="0%" x2="100%" y2="50%">
-            <stop offset="0%" stopColor="#6E0B22" />
-            <stop offset="60%" stopColor="#550418" />
-            <stop offset="100%" stopColor="#3F0211" />
+            <stop offset="0%" stopColor="#4A020E" />
+            <stop offset="25%" stopColor="#6E0B22" />
+            <stop offset="65%" stopColor="#550418" />
+            <stop offset="100%" stopColor="#38020F" />
+          </linearGradient>
+
+          <linearGradient id="maroonShadowGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stopColor="#2A0108" stopOpacity="0.85" />
+            <stop offset="50%" stopColor="#3B020F" stopOpacity="0.95" />
+            <stop offset="100%" stopColor="#250106" stopOpacity="0.8" />
           </linearGradient>
 
           <linearGradient id="goldRibbonGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#C5964E" stopOpacity="0.3" />
-            <stop offset="50%" stopColor="#F9E29D" stopOpacity="0.85" />
-            <stop offset="100%" stopColor="#B3862D" stopOpacity="0.4" />
+            <stop offset="0%" stopColor="#C5964E" stopOpacity="0.35" />
+            <stop offset="35%" stopColor="#F9E29D" stopOpacity="0.9" />
+            <stop offset="70%" stopColor="#D4AF37" stopOpacity="0.8" />
+            <stop offset="100%" stopColor="#B3862D" stopOpacity="0.45" />
           </linearGradient>
 
           <filter id="goldAuraGlow" x="-30%" y="-30%" width="160%" height="160%">
@@ -381,59 +389,59 @@ const HeroOrbitSection = () => {
         </div>
       </div>
 
-      {/* Dynamic Maroon & Shimmering Gold Silk Ribbon Waves (Organic Flowing Curves) */}
+      {/* Dynamic Maroon & Shimmering Gold Silk Ribbon Waves (Seamless Flowing Curves) */}
       <div className="hero-waves-wrapper" aria-hidden="true">
         <svg
           viewBox="0 0 1440 280"
           preserveAspectRatio="none"
           className="hero-waves-svg"
         >
-          {/* Deep Maroon Flowing Silk Wave Ribbon (Organic Curved Top & Bottom) */}
+          {/* Deep Maroon Flowing Silk Wave Ribbon (Full Width Seamless Flow) */}
           <path
-            d="M 380 230 C 640 160, 880 220, 1140 135 C 1260 95, 1360 115, 1440 145 L 1440 215 C 1370 185, 1260 170, 1130 205 C 890 270, 640 230, 360 255 Z"
+            d="M -60 195 C 160 238, 420 252, 700 208 C 980 162, 1220 125, 1500 138 L 1500 218 C 1240 190, 1000 218, 720 268 C 440 318, 180 292, -60 240 Z"
             fill="url(#maroonWaveGradient)"
           />
-          {/* Secondary Maroon Dark Shadow Wave Ribbon */}
+
+          {/* Secondary Maroon Dark Shadow Fold Ribbon */}
           <path
-            d="M 680 240 C 900 180, 1140 215, 1330 150 C 1390 130, 1420 140, 1440 155 L 1440 230 C 1380 205, 1270 195, 1110 235 C 960 270, 810 260, 680 240 Z"
-            fill="#3B020F"
-            opacity="0.85"
+            d="M -60 215 C 180 255, 460 268, 760 225 C 1060 178, 1280 152, 1500 168 L 1500 230 C 1280 205, 1060 232, 760 282 C 460 328, 180 305, -60 255 Z"
+            fill="url(#maroonShadowGradient)"
           />
 
-          {/* Golden Silk Wave Strand sweeping along bottom-left */}
+          {/* Golden Silk Wave Strand sweeping along the upper contour */}
           <path
-            d="M -50 165 C 110 200, 260 225, 460 175 C 660 125, 830 160, 1020 210 C 840 195, 660 165, 460 205 C 260 245, 100 225, -50 195 Z"
+            d="M -60 165 C 150 212, 380 228, 640 185 C 900 142, 1180 120, 1500 132 C 1180 145, 900 172, 640 212 C 380 252, 150 232, -60 185 Z"
             fill="url(#goldRibbonGradient)"
           />
 
-          {/* Shimmering Golden Sinusoidal Frequency Waves */}
+          {/* Shimmering Golden Sinusoidal Frequency Wave Strands */}
           <path
-            d="M -30 150 Q 220 220, 460 170 T 960 185 T 1440 140"
+            d="M -50 152 C 180 208, 440 232, 720 185 C 1000 135, 1250 115, 1490 128"
             fill="none"
             stroke="#D4AF37"
             strokeWidth="1.8"
-            opacity="0.75"
+            opacity="0.8"
           />
           <path
-            d="M -30 160 Q 220 230, 470 180 T 970 195 T 1440 150"
+            d="M -50 162 C 190 218, 450 242, 730 195 C 1010 145, 1260 125, 1490 138"
             fill="none"
             stroke="#FFECA8"
             strokeWidth="1.2"
-            opacity="0.6"
+            opacity="0.65"
           />
           <path
-            d="M -30 170 Q 220 240, 480 190 T 980 205 T 1440 160"
+            d="M -50 174 C 200 228, 460 252, 740 205 C 1020 155, 1270 135, 1490 148"
             fill="none"
             stroke="#D4AF37"
             strokeWidth="1"
-            opacity="0.45"
+            opacity="0.5"
           />
           <path
-            d="M 400 235 Q 750 180, 1120 190 T 1440 170"
+            d="M 420 225 C 700 182, 1020 155, 1320 170 T 1490 175"
             fill="none"
             stroke="#FCEAB3"
             strokeWidth="1"
-            opacity="0.5"
+            opacity="0.55"
           />
         </svg>
       </div>

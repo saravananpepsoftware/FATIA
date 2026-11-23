@@ -8,13 +8,13 @@
   border: 1px solid rgba(223, 176, 62, 0.45);
   border-radius: 16px;
   box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5), 0 0 18px rgba(223, 176, 62, 0.25);
-  padding: 10px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 4px;
-  min-width: 240px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 170px;
   z-index: 1000;
-  animation: fadeIn 0.2s ease-in-out forwards;
+  animation: fairFadeIn 0.2s ease-in-out forwards;
 }
 
 .fair-dropdown-menu::before {
@@ -26,7 +26,7 @@
   height: 16px;
 }
 
-@keyframes fadeIn {
+@keyframes fairFadeIn {
   from {
     opacity: 0;
     transform: translate(-50%, -6px);
@@ -38,18 +38,22 @@
 }
 
 .fair-dropdown-item {
-  font-size: 0.88rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 0.90rem;
   font-weight: 600;
   color: #FFFFFF;
-  padding: 8px 12px;
-  border-radius: 8px;
+  padding: 9px 16px;
+  border-radius: 9px;
   transition: all 0.2s ease;
   text-decoration: none;
-  text-align: center;
+  white-space: nowrap;
 }
 
 .fair-dropdown-item:hover,
 .fair-dropdown-item.active {
   background: rgba(223, 176, 62, 0.18);
   color: #FFEAB6;
+  transform: translateX(3px);
 }
