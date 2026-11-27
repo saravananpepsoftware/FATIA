@@ -169,8 +169,25 @@
 }
 
 /* ==========================================================================
-   TOP-RIGHT FLOATING PHOTO COUNTER BADGE
+   TOP-RIGHT FLOATING AUTO-PLAY & PHOTO COUNTER BADGES
    ========================================================================== */
+
+.carousel-autoplay-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3.5px;
+  background: linear-gradient(90deg, #D4AF37 0%, #FFF0B8 60%, #E5C158 100%);
+  z-index: 12;
+  border-top-left-radius: 26px;
+  animation: fairSlideProgress 3s linear forwards;
+  pointer-events: none;
+}
+
+@keyframes fairSlideProgress {
+  from { width: 0%; }
+  to { width: 100%; }
+}
 
 .carousel-photo-badge {
   position: absolute;

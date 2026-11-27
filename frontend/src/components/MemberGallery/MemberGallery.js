@@ -47,19 +47,23 @@ const MemberGallery = ({ photos = [], title = 'Photo Highlights', year = '' }) =
   const cleanYear = year || (title.match(/\d{4}/) ? title.match(/\d{4}/)[0] : '2015');
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isHovered, setIsHovered] = useState(false);
   const [imageErrors, setImageErrors] = useState({});
 
   const totalPhotos = displayPhotos.length;
 
   useEffect(() => {
-    if (isHovered || totalPhotos <= 1) return;
+    setCurrentIndex(0);
+    setImageErrors({});
+  }, [cleanYear, totalPhotos]);
+
+  useEffect(() => {
+    if (totalPhotos <= 1) return;
     const timer = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % totalPhotos);
-    }, 5000);
+    }, 3000);
 
     return () => clearInterval(timer);
-  }, [isHovered, totalPhotos]);
+  }, [totalPhotos]);
 
   const handlePrev = (e) => {
     if (e) e.stopPropagation();
@@ -106,11 +110,12 @@ const MemberGallery = ({ photos = [], title = 'Photo Highlights', year = '' }) =
       </div>
 
       {/* 2. Main Carousel Card Stage */}
-      <div
-        className="carousel-stadium-card"
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-      >
+      <div className="carousel-stadium-card">
+        {/* Auto-Slideshow Progress Bar */}
+        {totalPhotos > 1 && (
+          <div key={currentIndex} className="carousel-autoplay-progress" aria-hidden="true" />
+        )}
+
         {/* Floating Top-Right Photo Counter Badge */}
         <div className="carousel-photo-badge">
           <svg className="badge-camera-icon" viewBox="0 0 24 24" fill="currentColor">
