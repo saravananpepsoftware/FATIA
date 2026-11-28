@@ -136,8 +136,19 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: center top;
   display: block;
+}
+
+.carousel-slide-luxury.fit-contain {
+  background: #FAF6EA;
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+.carousel-slide-luxury.fit-contain .carousel-hero-image {
+  object-fit: contain;
+  object-position: center;
 }
 
 /* Placeholder Stage for missing images */

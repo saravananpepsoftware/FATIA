@@ -1,6 +1,6 @@
 /* Members Page Header */
 .members-header-section {
-  margin-bottom: 24px;
+  margin-bottom: 12px;
 }
 
 .state-registry-pill {
@@ -52,8 +52,8 @@
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  margin-bottom: 44px;
-  margin-top: 24px;
+  margin-bottom: 24px;
+  margin-top: 14px;
   flex-wrap: wrap;
 }
 
@@ -114,8 +114,8 @@
 .members-podium-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  column-gap: 28px;
-  row-gap: 56px;
+  column-gap: 24px;
+  row-gap: 26px;
   width: 100%;
   max-width: 1300px;
   margin: 0 auto;

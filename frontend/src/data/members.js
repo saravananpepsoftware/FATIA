@@ -123,6 +123,7 @@ export const membersData = [
   {
     id: 11,
     name: "ERODE INFORMATION TECHNOLOGY TRADERS ASSOCIATION",
+    logo: "/assets/members/editta-logo.jpg",
     headTable: {
       president: "D.BASKARAN",
       presidentPhone: "98430 81450",

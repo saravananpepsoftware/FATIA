@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import PageContainer from '../../components/PageContainer/PageContainer';
 import MemberGallery from '../../components/MemberGallery/MemberGallery';
 import { fairYears, getFairDataByYear } from '../../data/fair';
+import { formatProfileName } from '../../utils/formatProfileName';
 import './FairYearPage.css';
 
 const FairMemberMedallion = ({ member }) => {
@@ -59,7 +60,7 @@ const FairMemberMedallion = ({ member }) => {
         </svg>
       </div>
 
-      <h3 className="fair-member-name">{name}</h3>
+      <h3 className="fair-member-name">{formatProfileName(name)}</h3>
       <span className="fair-member-role">{role}</span>
       <div className="fair-gold-dash" aria-hidden="true" />
     </div>
@@ -312,25 +313,49 @@ const FairYearPage = () => {
             </section>
           )}
 
-          {/* Section 3: Additional Committee Members */}
-          {fairData.additionalCommittee && fairData.additionalCommittee.length > 0 && (
-            <section className="fair-year-section-luxury" style={{ marginTop: '75px' }}>
-              <div className="fair-year-section-header">
-                <div className="fair-year-num-badge">FAIR {fairData.year} COMMITTEE</div>
-                <h2 className="fair-year-section-title">Committee Members ({fairData.year})</h2>
-                <p className="fair-year-section-desc">
-                  Advisors, committee chairmen, joint secretaries, and directors steering the {fairData.year} expo.
-                </p>
-                <div className="fair-year-underline" aria-hidden="true" />
-              </div>
+          {/* Section 3: Additional Committee Members (Grouped Sections or Single Grid) */}
+          {fairData.committeeSections && fairData.committeeSections.length > 0 ? (
+            fairData.committeeSections.map((section, sIdx) => (
+              section.members && section.members.length > 0 && (
+                <section
+                  key={sIdx}
+                  className="fair-year-section-luxury"
+                  style={{ marginTop: sIdx === 0 ? '75px' : '60px' }}
+                >
+                  <div className="fair-year-section-header">
+                    <div className="fair-year-num-badge">{section.badge}</div>
+                    <h2 className="fair-year-section-title">{section.title}</h2>
+                    <div className="fair-year-underline" aria-hidden="true" />
+                  </div>
 
-              {/* Responsive Grid of Medallions */}
-              <div className="fair-committee-medallions-grid">
-                {fairData.additionalCommittee.map((member, idx) => (
-                  <FairMemberMedallion key={idx} member={member} />
-                ))}
-              </div>
-            </section>
+                  <div className="fair-committee-medallions-grid">
+                    {section.members.map((member, idx) => (
+                      <FairMemberMedallion key={idx} member={member} />
+                    ))}
+                  </div>
+                </section>
+              )
+            ))
+          ) : (
+            fairData.additionalCommittee && fairData.additionalCommittee.length > 0 && (
+              <section className="fair-year-section-luxury" style={{ marginTop: '75px' }}>
+                <div className="fair-year-section-header">
+                  <div className="fair-year-num-badge">FAIR {fairData.year} COMMITTEE</div>
+                  <h2 className="fair-year-section-title">Committee Members ({fairData.year})</h2>
+                  <p className="fair-year-section-desc">
+                    Advisors, committee chairmen, joint secretaries, and directors steering the {fairData.year} expo.
+                  </p>
+                  <div className="fair-year-underline" aria-hidden="true" />
+                </div>
+
+                {/* Responsive Grid of Medallions */}
+                <div className="fair-committee-medallions-grid">
+                  {fairData.additionalCommittee.map((member, idx) => (
+                    <FairMemberMedallion key={idx} member={member} />
+                  ))}
+                </div>
+              </section>
+            )
           )}
         </div>
       </div>

@@ -6,6 +6,8 @@ import BoardDropdown from '../BoardDropdown/BoardDropdown';
 import MobileBoardMenu from '../MobileBoardMenu/MobileBoardMenu';
 import FairDropdown from '../FairDropdown/FairDropdown';
 import MobileFairMenu from '../MobileFairMenu/MobileFairMenu';
+import EventsDropdown from '../EventsDropdown/EventsDropdown';
+import MobileEventsMenu from '../MobileEventsMenu/MobileEventsMenu';
 import './Header.css';
 
 const navItemsList = [
@@ -14,6 +16,7 @@ const navItemsList = [
   { label: 'Members', route: '/members', hasDropdown: true, dropdownType: 'members' },
   { label: 'Board', route: '/board', hasDropdown: true, dropdownType: 'board' },
   { label: 'Fair', route: '/fair', hasDropdown: true, dropdownType: 'fair' },
+  { label: 'Events', route: '/events', hasDropdown: true, dropdownType: 'events' },
   { label: 'Contact Us', route: '/contact' }
 ];
 
@@ -21,6 +24,7 @@ const Header = () => {
   const [showMembersDropdown, setShowMembersDropdown] = useState(false);
   const [showBoardDropdown, setShowBoardDropdown] = useState(false);
   const [showFairDropdown, setShowFairDropdown] = useState(false);
+  const [showEventsDropdown, setShowEventsDropdown] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const location = useLocation();
@@ -29,6 +33,10 @@ const Header = () => {
     location.pathname.startsWith('/members') || location.pathname.includes('honorary');
   const isBoardActive = location.pathname.startsWith('/board');
   const isFairActive = location.pathname.startsWith('/fair');
+  const isEventsActive =
+    location.pathname.startsWith('/events') ||
+    location.pathname.startsWith('/social-welfare') ||
+    location.pathname.startsWith('/industrial-seminar');
 
   return (
     <header className="header-root">
@@ -215,6 +223,37 @@ const Header = () => {
                 );
               }
 
+              if (item.hasDropdown && item.dropdownType === 'events') {
+                return (
+                  <div
+                    key={item.label}
+                    className="nav-item-dropdown-container"
+                    onMouseEnter={() => setShowEventsDropdown(true)}
+                    onMouseLeave={() => setShowEventsDropdown(false)}
+                  >
+                    <button
+                      type="button"
+                      className={`nav-link ${isEventsActive ? 'active' : ''}`}
+                      onClick={() => setShowEventsDropdown((prev) => !prev)}
+                    >
+                      <span>{item.label}</span>
+                      <svg
+                        className="nav-caret-svg"
+                        width="9"
+                        height="9"
+                        viewBox="0 0 10 10"
+                        fill="currentColor"
+                      >
+                        <path d="M2 3.5L5 6.5L8 3.5H2Z" />
+                      </svg>
+                    </button>
+                    {showEventsDropdown && (
+                      <EventsDropdown onItemClick={() => setShowEventsDropdown(false)} />
+                    )}
+                  </div>
+                );
+              }
+
               return (
                 <NavLink
                   key={item.label}
@@ -290,6 +329,13 @@ const Header = () => {
           />
 
           <MobileFairMenu
+            onItemClick={() => {
+              setMobileMenuOpen(false);
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+          />
+
+          <MobileEventsMenu
             onItemClick={() => {
               setMobileMenuOpen(false);
               window.scrollTo({ top: 0, behavior: 'smooth' });

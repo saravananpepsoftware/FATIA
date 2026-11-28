@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import PageContainer from '../../components/PageContainer/PageContainer';
 import { boardData } from '../../data/board';
+import { formatProfileName } from '../../utils/formatProfileName';
 import './PastTermsBoard.css';
 
 const PastTermMemberMedallion = ({ member }) => {
   const [imgError, setImgError] = useState(false);
   const name = member.name;
-  const designationTamil = member.positionTamil || member.position;
+  const designationEnglish = member.position || member.positionTamil;
 
   return (
     <div className="past-term-member-card">
@@ -57,8 +58,8 @@ const PastTermMemberMedallion = ({ member }) => {
         </svg>
       </div>
 
-      <h3 className="past-term-member-name">{name}</h3>
-      <span className="past-term-member-designation">{designationTamil}</span>
+      <h3 className="past-term-member-name">{formatProfileName(name)}</h3>
+      <span className="past-term-member-designation">{designationEnglish}</span>
       <div className="past-term-gold-dash" aria-hidden="true" />
     </div>
   );

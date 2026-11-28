@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { fairYears } from '../../data/fair';
+import { fairYears, getFairDropdownTitle } from '../../data/fair';
 import './FairDropdown.css';
 
 const FairDropdown = ({ onItemClick }) => {
@@ -15,7 +15,7 @@ const FairDropdown = ({ onItemClick }) => {
           }
           onClick={onItemClick}
         >
-          <span>{year} Fair</span>
+          <span>{getFairDropdownTitle(year)}</span>
         </NavLink>
       ))}
     </div>

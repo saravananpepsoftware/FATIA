@@ -41,13 +41,20 @@ const AssociationCard = ({ association, isRuby = false }) => {
       {/* Arched / Circular Medallion Disc */}
       <div className="medallion-disc-wrap">
         <div className="medallion-face">
-          {/* Industry Category Icon Squircle */}
-          <div className="category-icon-box">
-            {getAssociationIcon(association.name)}
-          </div>
-
-          {/* District Association Pill Tag */}
-          <span className="category-pill-tag">District Association</span>
+          {/* Association Logo or Industry Category Icon Squircle */}
+          {association.logo ? (
+            <div className="association-custom-logo-wrap">
+              <img
+                src={association.logo}
+                alt={association.name}
+                className="association-custom-logo"
+              />
+            </div>
+          ) : (
+            <div className="category-icon-box">
+              {getAssociationIcon(association.name)}
+            </div>
+          )}
 
           {/* Association Title */}
           <h3 className="association-title" title={association.name}>

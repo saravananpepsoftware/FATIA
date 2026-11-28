@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import PageContainer from '../../components/PageContainer/PageContainer';
 import { honouraryMembers, silverJubileeHallMembers } from '../../data/honouraryMembers';
+import { formatProfileName } from '../../utils/formatProfileName';
 import './HonouraryMembers.css';
 
 const SilverJubileeMedallion = ({ member }) => {
@@ -58,7 +59,7 @@ const SilverJubileeMedallion = ({ member }) => {
         </svg>
       </div>
 
-      <h3 className="silver-jubilee-member-name">{name}</h3>
+      <h3 className="silver-jubilee-member-name">{formatProfileName(name)}</h3>
       <span className="silver-jubilee-member-company">{company}</span>
       <div className="silver-jubilee-gold-dash" aria-hidden="true" />
     </div>

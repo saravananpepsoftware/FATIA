@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
+import { formatProfileName } from '../../utils/formatProfileName';
 import './BoardSection.css';
 
 const BoardMemberItem = ({ member, isLastInRow }) => {
   const [imgError, setImgError] = useState(false);
-  const nameTamil = member.nameTamil || member.name;
-  const designationTamil = member.positionTamil || member.position || 'இயக்குநர்';
+  const nameEnglish = member.name || member.nameTamil;
+  const designationEnglish = member.position || member.positionTamil || 'Director';
 
   return (
     <div className="board-exec-card-container">
@@ -15,7 +16,7 @@ const BoardMemberItem = ({ member, isLastInRow }) => {
             {member.image && !imgError ? (
               <img
                 src={member.image}
-                alt={nameTamil}
+                alt={nameEnglish}
                 className="board-exec-avatar-img"
                 onError={() => setImgError(true)}
               />
@@ -64,8 +65,8 @@ const BoardMemberItem = ({ member, isLastInRow }) => {
 
         {/* Member Details */}
         <div className="board-exec-info">
-          <h3 className="board-exec-name">{nameTamil}</h3>
-          <span className="board-exec-designation">{designationTamil}</span>
+          <h3 className="board-exec-name">{formatProfileName(nameEnglish)}</h3>
+          <span className="board-exec-designation">{designationEnglish}</span>
           {member.phone && (
             <a href={`tel:${member.phone.replace(/\s+/g, '')}`} className="board-exec-phone-pill">
               <svg className="board-exec-phone-icon" viewBox="0 0 24 24" fill="currentColor">

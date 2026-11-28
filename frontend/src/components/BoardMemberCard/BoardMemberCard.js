@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
+import { formatProfileName } from '../../utils/formatProfileName';
 import './BoardMemberCard.css';
 
 const BoardMemberCard = ({ member, highlight = false, hideImage = false }) => {
   const [imageError, setImageError] = useState(false);
 
-  const designationTamil = member.positionTamil || member.position || member.role || member.title || 'இயக்குநர்';
-  const nameTamil = member.nameTamil || member.name;
+  const designationEnglish = member.position || member.role || member.title || member.positionTamil || 'Director';
+  const nameEnglish = member.name || member.nameTamil;
 
   const showImageFrame = !hideImage && !member.hideImage;
 
@@ -16,7 +17,7 @@ const BoardMemberCard = ({ member, highlight = false, hideImage = false }) => {
           {member.image && !imageError ? (
             <img
               src={member.image}
-              alt={nameTamil}
+              alt={nameEnglish}
               className="board-member-photo-img"
               onError={() => setImageError(true)}
             />
@@ -30,8 +31,8 @@ const BoardMemberCard = ({ member, highlight = false, hideImage = false }) => {
         </div>
       )}
 
-      <h3 className="board-member-name-tamil">{nameTamil}</h3>
-      <span className="board-member-position-tamil">{designationTamil}</span>
+      <h3 className="board-member-name-tamil">{formatProfileName(nameEnglish)}</h3>
+      <span className="board-member-position-tamil">{designationEnglish}</span>
 
       {member.phone && (
         <a href={`tel:${member.phone.replace(/\s+/g, '')}`} className="board-member-phone">

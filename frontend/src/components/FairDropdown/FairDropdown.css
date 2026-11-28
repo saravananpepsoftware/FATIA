@@ -12,7 +12,7 @@
   display: flex;
   flex-direction: column;
   gap: 3px;
-  min-width: 170px;
+  min-width: 245px;
   z-index: 1000;
   animation: fairFadeIn 0.2s ease-in-out forwards;
 }

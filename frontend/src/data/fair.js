@@ -1,5 +1,17 @@
 export const fairYears = [2027, 2025, 2023, 2018, 2016, 2015, 2013];
 
+export const fairDropdownTitles = {
+  2013: '1st FATIA Fair 2013',
+  2015: '2nd FATIA Fair 2015',
+  2016: '3rd FATIA Fair 2016',
+  2018: '4th FATIA Fair 2018',
+  2023: '5th FATIA Fair 2023',
+  2025: '6th FATIA Fair 2025',
+  2027: '7th FATIA Fair 2027 Upcoming',
+};
+
+export const getFairDropdownTitle = (year) => fairDropdownTitles[year] || `${year} Fair`;
+
 const mockMemberNamesByYear = {
   2027: [
     { name: "P. Dhanapalan", role: "Chairman", image: "/assets/board/Balu@P.Dhanapalan-Vice President.jpg" },
@@ -14,65 +26,128 @@ const mockMemberNamesByYear = {
 
     // Core Committee & Key Officers
     { name: "V.K. Rajamanickam", role: "Founder Fatia Fair", image: "/assets/fair_committee/V.K.Rajamanickam-Founder FATIA FAIR.jpg" },
-    { name: "R. Senthilkumar", role: "Vice Chairman", image: "/assets/fair_committee/Senthil.jpg" },
-    { name: "N.T. Moorthy", role: "IPC", image: "/assets/fair_committee/N.T.Moorthy-  FATIA FAIR 2023 Chairman.jpg" },
     { name: "P. Ravichandran", role: "Co-ordinator", image: "/assets/fair_committee/P.Ravichandran-Co-ordinator.jpg" },
+    { name: "R. Senthil Kumar", role: "Vice President", image: "/assets/fair_committee/Senthil.jpg" },
+    { name: "R. Muruganantham", role: "PRO", image: "/assets/fair_committee/R.Muruganantham-PRO.jpg" },
+    { name: "N.T. Moorthy", role: "IPC", image: "/assets/fair_committee/N.T.Moorthy-  FATIA FAIR 2023 Chairman.jpg" },
+
+    // Joint Secretaries
+    { name: "K. Muthusamy", role: "Joint Secretary", image: "/assets/committee_chairmen/Sekar@K.Muthusamy, Taxation Committee Chairman.jpg" },
+    { name: "A. Selvaraj", role: "Joint Secretary", image: "/assets/fair_committee/A.Selvaraj-Director.jpeg" },
+    { name: "M.S. Chinnasamy", role: "Joint Secretary", image: "/assets/fair_committee/M.S.Chinnasamy- Director.jpeg" },
+    { name: "R. Manohar", role: "Joint Secretary", image: "/assets/fair_committee/manokar rmbf rooster sheet photo.JPG" },
+
+    // Advisors
+    { name: "V. Rajamanickam", role: "Advisor", image: "/assets/fair_committee/V.Rajamanickam-Advisor.jpg" },
+    { name: "S. Senguttuvan", role: "Advisor", image: "/assets/fair_committee/S.Senguttuvan-Advisor.jpg" },
+    { name: "Balu @ P. Dhanabalan", role: "Advisor", image: "/assets/fair_committee/Balu@P.Dhanapalan-Advisor.jpg" },
+    { name: "M.R. Venkatachalam", role: "Advisor", image: "/assets/fair_committee/M.R. Venkatachalam.jpg" },
+    { name: "C. Muthusamy", role: "Advisor", image: "/assets/fair_committee/C.Muthusamy-Advisor.jpeg" },
+    { name: "C. Balakrishnan", role: "Advisor", image: "/assets/fair_committee/C.Balakrishnan-Chairman, Job Oppurtunity Committee.jpg" },
+
+    // Directors
+    { name: "V.M. Elango", role: "Director", image: "/assets/fair_committee/V.M.Elango-Director.jpg" },
+    { name: "K.K. Vimal Karupannan", role: "Director", image: "/assets/fair_committee/Vimal-removebg-preview.png" },
+    { name: "K. Anbalagan", role: "Director", image: "/assets/k_anbazhagan.jpg" },
+    { name: "M. Noor Mohammed", role: "Director", image: "/assets/fair_committee/M.Noor Mohammad-Director.jpeg" },
+    { name: "S. Raja Mohammed", role: "Director", image: "/assets/fair_committee/Raja Muhameed.jpg" },
+    { name: "S. Chidambara Saravanan", role: "Director", image: "/assets/fair_committee/S.Chidambara Saravanan-Director.jpeg" },
+    { name: "M. Sathya Moorthi", role: "Director", image: "/assets/fair_committee/Sathyamoorthy.jpg" },
+    { name: "S. Gnanavelan", role: "Director", image: "/assets/fair_committee/Gnanavelan-Director.jpeg" },
+    { name: "B. Sree Prabhu", role: "Director", image: "/assets/board/006.jpg" },
+    { name: "V. Dhanasekar", role: "Director", image: "/assets/fair_committee/V.Dhanasekar - Director.jpeg" },
+
+    // Malar Committee
+    { name: "A.P. Nallashivam", role: "Malar Committee", image: "/assets/fair_committee/A.P. Nallashivam - Malar.jpg" },
+    { name: "S. Anandkumar", role: "Malar Committee", image: "/assets/fair_committee/Anand.jpg" },
+    { name: "P. Gowri Shankar", role: "Malar Committee" }
+  ],
+  2023: [
+    // Board Members (Top 3)
+    { name: "N.T. Moorthy", role: "Chairman", image: "/assets/fair_committee/N.T.Moorthy-  FATIA FAIR 2023 Chairman.jpg" },
+    { name: "R. Senthil Kumar", role: "Secretary", image: "/assets/fair_committee/Senthil.jpg" },
+    { name: "P. Chinnasamy", role: "Treasurer", image: "/assets/fair_committee/P.CHINNASAMY  PONSHANKAR AGENCIES.jpg" },
+
+    // Core Committee & Key Officers
+    { name: "V.K. Rajamanickam", role: "Founder Fatia Fair", image: "/assets/fair_committee/V.K.Rajamanickam-Founder FATIA FAIR.jpg" },
+    { name: "C. Balakrishnan", role: "IPC", image: "/assets/fair_committee/C.Balakrishnan-Chairman, Job Oppurtunity Committee.jpg" },
+    { name: "P. Ravichandran", role: "Co-ordinator", image: "/assets/fair_committee/P.Ravichandran-Co-ordinator.jpg" },
+    { name: "K. Jifry", role: "Vice President", image: "/assets/fair_committee/K.Jifry-Vice President.jpg" },
     { name: "R. Muruganantham", role: "PRO", image: "/assets/fair_committee/R.Muruganantham-PRO.jpg" },
 
     // Joint Secretaries
+    { name: "K. Muthusamy", role: "Joint Secretary", image: "/assets/committee_chairmen/Sekar@K.Muthusamy, Taxation Committee Chairman.jpg" },
     { name: "K. Kailasapathy", role: "Joint Secretary", image: "/assets/fair_committee/K.Kailasapathy-Joint Secretary.jpg" },
-    { name: "A. Selvaraj", role: "Joint Secretary", image: "/assets/fair_committee/A.Selvaraj-Director.jpeg" },
-    { name: "R. Manohar", role: "Joint Secretary", image: "/assets/fair_committee/manokar rmbf rooster sheet photo.JPG" },
-    { name: "M.S. Chinnasamy", role: "Joint Secretary", image: "/assets/fair_committee/M.S.Chinnasamy- Director.jpeg" },
+    { name: "K.K. Vimal Karuppannan", role: "Joint Secretary", image: "/assets/fair_committee/Vimal-removebg-preview.png" },
+    { name: "K. Sivakumar", role: "Joint Secretary", image: "/assets/board/K.Sivakumar-Director.jpg" },
 
     // Advisors
     { name: "V. Rajamanickam", role: "Advisor", image: "/assets/fair_committee/V.Rajamanickam-Advisor.jpg" },
     { name: "S. Senguttuvan", role: "Advisor", image: "/assets/fair_committee/S.Senguttuvan-Advisor.jpg" },
     { name: "Balu @ P. Dhanabalan", role: "Advisor", image: "/assets/fair_committee/Balu@P.Dhanapalan-Advisor.jpg" },
     { name: "C. Muthusamy", role: "Advisor", image: "/assets/fair_committee/C.Muthusamy-Advisor.jpeg" },
-    { name: "M.R. Venkatachalam", role: "Advisor", image: "/assets/fair_committee/M.R. Venkatachalam.jpg" },
-    { name: "C. Doraisamy", role: "Advisor", image: "/assets/fair_committee/C.Doraisamy-Advisor.jpg" },
     { name: "T. Jagadeesan", role: "Advisor", image: "/assets/fair_committee/T.Jagadeesan-Advisor.jpg" },
-    { name: "R.S. Nataraja Mudaliyar", role: "Advisor", image: "/assets/fair_committee/R.S. Nataraja Muthaliyar.jpg" },
-    { name: "P. Jayaprakash", role: "Advisor", image: "/assets/fair_committee/Jayprakash.jpg" },
-
-    // Committee Chairmen
-    { name: "C. Balakrishnan", role: "Chairman - Job Opportunity Committee", image: "/assets/fair_committee/C.Balakrishnan-Chairman, Job Oppurtunity Committee.jpg" },
-    { name: "N. Nagarajan", role: "Chairman - Public Relation Committee", image: "/assets/fair_committee/N.Nagarajan-Chariman, Public Relation Committee.jpg" },
+    { name: "C. Doraisamy", role: "Advisor", image: "/assets/fair_committee/C.Doraisamy-Advisor.jpg" },
 
     // Directors
     { name: "V.M. Elango", role: "Director", image: "/assets/fair_committee/V.M.Elango-Director.jpg" },
-    { name: "M. Noor Mohammad", role: "Director", image: "/assets/fair_committee/M.Noor Mohammad-Director.jpeg" },
-    { name: "K.K. Vimal Karuppannan", role: "Director", image: "/assets/fair_committee/Vimal-removebg-preview.png" },
+    { name: "M.R. Venkatachalam", role: "Director", image: "/assets/fair_committee/M.R. Venkatachalam.jpg" },
+    { name: "R. Manohar", role: "Director", image: "/assets/fair_committee/manokar rmbf rooster sheet photo.JPG" },
+    { name: "M. Noor Mohammed", role: "Director", image: "/assets/fair_committee/M.Noor Mohammad-Director.jpeg" },
+    { name: "M.S. Chinnasamy", role: "Director", image: "/assets/fair_committee/M.S.Chinnasamy- Director.jpeg" },
+    { name: "S. Raja Mohamed", role: "Director", image: "/assets/fair_committee/Raja Muhameed.jpg" },
+    { name: "L.K.M. Suresh", role: "Director", image: "/assets/fair_committee/L.K.M.Suresh - Director.jpeg" },
+    { name: "L. Jagadeesh", role: "Director", image: "/assets/fair_committee/L.Jagadeesh - Director.jpeg" },
     { name: "S. Chidambara Saravanan", role: "Director", image: "/assets/fair_committee/S.Chidambara Saravanan-Director.jpeg" },
     { name: "M. Sathya Moorthi", role: "Director", image: "/assets/fair_committee/Sathyamoorthy.jpg" },
-    { name: "S. Raja Mohamed", role: "Director", image: "/assets/fair_committee/Raja Muhameed.jpg" },
-    { name: "B. Sree Prabhu", role: "Director", image: "/assets/board/006.jpg" },
     { name: "S. Gnanavelan", role: "Director", image: "/assets/fair_committee/Gnanavelan-Director.jpeg" },
-    { name: "V. Dhanasekar", role: "Director", image: "/assets/fair_committee/V.Dhanasekar - Director.jpeg" },
+    { name: "A. Selvaraj", role: "Director", image: "/assets/fair_committee/A.Selvaraj-Director.jpeg" },
     { name: "C. Dinesh", role: "Director", image: "/assets/fair_committee/C.Dinesh - Director.jpeg" },
-    { name: "L. Jagadeesh", role: "Director", image: "/assets/fair_committee/L.Jagadeesh - Director.jpeg" },
-    { name: "L.K.M. Suresh", role: "Director", image: "/assets/fair_committee/L.K.M.Suresh - Director.jpeg" },
     { name: "Y. Sathish", role: "Director", image: "/assets/fair_committee/Y.Sathish - Director.jpeg" },
+    { name: "V. Dhanasekar", role: "Director", image: "/assets/fair_committee/V.Dhanasekar - Director.jpeg" },
 
-    // Malar Committee Editors
-    { name: "A.P. Nallashivam", role: "Editor - Malar Committee", image: "/assets/fair_committee/A.P. Nallashivam - Malar.jpg" },
-    { name: "S. Anand Kumar", role: "Editor - Malar Committee", image: "/assets/fair_committee/Anand.jpg" }
-  ],
-  2023: [
-    { name: "N.T. Moorthy", role: "Chairman", image: "/assets/fair_committee/N.T.Moorthy-  FATIA FAIR 2023 Chairman.jpg" },
-    { name: "R. Senthilkumar", role: "Secretary", image: "/assets/fair_committee/Senthil.jpg" },
-    { name: "P. Chinnasamy", role: "Treasurer", image: "/assets/fair_committee/P.CHINNASAMY  PONSHANKAR AGENCIES.jpg" }
+    // Malar Committee
+    { name: "A.P. Nallashivam", role: "Fatia Malar", image: "/assets/fair_committee/A.P. Nallashivam - Malar.jpg" },
+    { name: "S. Anandakumar", role: "Fatia Malar", image: "/assets/fair_committee/Anand.jpg" }
   ],
   2018: [
     { name: "C. Balakrishnan", role: "Chairman", image: "/assets/fair_committee/C.Balakrishnan-Chairman, Job Oppurtunity Committee.jpg" },
     { name: "K. Jifry", role: "Secretary", image: "/assets/fair_committee/K.Jifry-Vice President.jpg" },
-    { name: "R. Senthilkumar", role: "Treasurer", image: "/assets/fair_committee/Senthil.jpg" }
+    { name: "R. Senthilkumar", role: "Treasurer", image: "/assets/fair_committee/Senthil.jpg" },
+    { name: "V.K. Rajamanickam", role: "IPC", image: "/assets/fair_committee/V.K.Rajamanickam-Founder FATIA FAIR.jpg" },
+    { name: "V. Rajamanickam", role: "Co-ordinator", image: "/assets/fair_committee/V.Rajamanickam-Advisor.jpg" },
+    { name: "N.T. Moorthy", role: "Vice Chairman", image: "/assets/fair_committee/N.T.Moorthy-  FATIA FAIR 2023 Chairman.jpg" },
+    { name: "V.M. Elango", role: "Joint Secretary", image: "/assets/fair_committee/V.M.Elango-Director.jpg" },
+    { name: "R. Balasubramanyan", role: "Joint Secretary", image: "/assets/r_balasubramaniam.jpg" },
+    { name: "K.P. Muthukumar", role: "Joint Secretary" },
+    { name: "M. Rajesh", role: "Joint Secretary", image: "/assets/committee_chairmen/Agni M.Rajesh, By-Law Amendment Regulation Committee Chairman.jpeg" },
+    { name: "P.A. Madheswaran", role: "Joint Secretary" },
+    { name: "G. Senthil", role: "Chairman - Malar" },
+    { name: "S. Anand Kumar", role: "Editor - Malar", image: "/assets/fair_committee/Anand.jpg" },
+    { name: "M.R. Venkatachalam", role: "PRO", image: "/assets/fair_committee/M.R. Venkatachalam.jpg" },
+    { name: "R. Manohar", role: "Fair Committee Member", image: "/assets/fair_committee/manokar rmbf rooster sheet photo.JPG" },
+    { name: "A.P. Nallashivam", role: "Fair Committee Member", image: "/assets/fair_committee/A.P. Nallashivam - Malar.jpg" },
+    { name: "J. Sivakumar", role: "Fair Committee Member" },
+    { name: "Chithirai Selvan", role: "Fair Committee Member" },
+    { name: "R.V. Murugananthan", role: "Fair Committee Member" },
+    { name: "K. Thulasi Doss", role: "Fair Committee Member" },
+    { name: "K. Anbalagan", role: "Fair Committee Member", image: "/assets/k_anbazhagan.jpg" },
+    { name: "M.D. Selvaraj", role: "Fair Committee Member" },
+    { name: "R. Muruganantham", role: "Fair Committee Member", image: "/assets/board/R.Muruganandam- Treasurer.jpg" }
   ],
   2016: [
     { name: "C. Balakrishnan", role: "Chairman", image: "/assets/fair_committee/C.Balakrishnan-Chairman, Job Oppurtunity Committee.jpg" },
     { name: "N.T. Moorthy", role: "Secretary", image: "/assets/fair_committee/N.T.Moorthy-  FATIA FAIR 2023 Chairman.jpg" },
-    { name: "K. Jifry", role: "Treasurer", image: "/assets/fair_committee/K.Jifry-Vice President.jpg" }
+    { name: "K. Jifry", role: "Treasurer", image: "/assets/fair_committee/K.Jifry-Vice President.jpg" },
+    { name: "V.K. Rajamanickam", role: "IPC", image: "/assets/fair_committee/V.K.Rajamanickam-Founder FATIA FAIR.jpg" },
+    { name: "V. Rajamanickam", role: "Co-ordinator", image: "/assets/fair_committee/V.Rajamanickam-Advisor.jpg" },
+    { name: "P. Jayaprakash", role: "Vice Chairman", image: "/assets/fair_committee/Jayprakash.jpg" },
+    { name: "V.M. Elango", role: "Joint Secretary", image: "/assets/fair_committee/V.M.Elango-Director.jpg" },
+    { name: "G. Senthil", role: "Joint Secretary" },
+    { name: "K.P. Muthukumar", role: "Joint Secretary" },
+    { name: "R. Balasubramanyan", role: "Joint Secretary", image: "/assets/r_balasubramaniam.jpg" },
+    { name: "P.A. Madheswaran", role: "Joint Secretary" },
+    { name: "M.R. Venkatachalam", role: "PRO", image: "/assets/fair_committee/M.R. Venkatachalam.jpg" }
   ],
   2015: [
     { name: "V.K. Rajamanickam", role: "Chairman", image: "/assets/fair_committee/V.K.Rajamanickam-Founder FATIA FAIR.jpg" },
@@ -107,8 +182,82 @@ export const getFairDataByYear = (year) => {
     return { name: m.name, title: m.role, role: m.role, image: m.image };
   });
 
-  const boardMembers = allCommittee.slice(0, 3);
-  const additionalCommittee = allCommittee.slice(3);
+  const boardMembers =
+    [2016, 2018, 2023, 2025].includes(numericYear)
+      ? []
+      : allCommittee.slice(0, 3);
+  const additionalCommittee =
+    [2016, 2018, 2023, 2025].includes(numericYear)
+      ? allCommittee
+      : allCommittee.slice(3);
+
+  const committeeSectionsByYear = {
+    2016: [
+      {
+        badge: 'FAIR 2016 COMMITTEE',
+        title: 'FATIA FAIR 2016 COMMITTEE',
+        members: allCommittee,
+      },
+    ],
+    2018: [
+      {
+        badge: 'FAIR 2018 COMMITTEE',
+        title: 'FATIA FAIR 2018 COMMITTEE',
+        members: allCommittee.slice(0, 14),
+      },
+      {
+        badge: 'FAIR 2018 MEMBERS',
+        title: 'Other Fair Committee Members',
+        members: allCommittee.slice(14),
+      },
+    ],
+    2023: [
+      {
+        badge: 'FAIR 2023 COMMITTEE',
+        title: 'FATIA FAIR 2023 COMMITTEE',
+        members: allCommittee.slice(0, 12),
+      },
+      {
+        badge: 'FAIR 2023 ADVISORS',
+        title: 'FATIA FAIR 2023 ADVISORS',
+        members: allCommittee.slice(12, 18),
+      },
+      {
+        badge: 'FAIR 2023 DIRECTORS',
+        title: 'FATIA FAIR 2023 DIRECTORS',
+        members: allCommittee.slice(18, 33),
+      },
+      {
+        badge: 'FAIR 2023 MALAR COMMITTEE',
+        title: 'FATIA FAIR 2023 MALAR COMMITTEE',
+        members: allCommittee.slice(33),
+      },
+    ],
+    2025: [
+      {
+        badge: 'FAIR 2025 COMMITTEE',
+        title: 'FATIA FAIR 2025 COMMITTEE',
+        members: allCommittee.slice(0, 12),
+      },
+      {
+        badge: 'FAIR 2025 ADVISORS',
+        title: 'FATIA FAIR 2025 ADVISORS',
+        members: allCommittee.slice(12, 18),
+      },
+      {
+        badge: 'FAIR 2025 DIRECTORS',
+        title: 'FATIA FAIR 2025 DIRECTORS',
+        members: allCommittee.slice(18, 28),
+      },
+      {
+        badge: 'FAIR 2025 MALAR COMMITTEE',
+        title: 'FATIA FAIR 2025 MALAR COMMITTEE',
+        members: allCommittee.slice(28),
+      },
+    ],
+  };
+
+  const committeeSections = committeeSectionsByYear[numericYear] || null;
 
   const taglineText = `Bringing together trade, industry, commerce, and enterprise across Tamil Nadu in ${numericYear}.`;
   const aboutBody = `The FATIA Fair ${numericYear} was conducted as a premier state-level trade and industrial expo by the Federation of All Trade & Industry Associations of Erode District. Bringing together leading business associations, industrial manufacturers, regional traders, and enterprise leaders, the expo showcased commercial innovations, trade growth, and industrial solutions. Organised with meticulous dedication by the FATIA Fair Committee, it served as a landmark platform for trade expansion and industrial networking across all districts.`;
@@ -141,6 +290,19 @@ export const getFairDataByYear = (year) => {
       { url: '/assets/fatia_fair/2018/IMG_1608.JPG', caption: `FATIA Fair 2018 Commercial Showcase` },
       { url: '/assets/fatia_fair/2018/IMG_1777.JPG', caption: `FATIA Fair 2018 Executive Forum` },
       { url: '/assets/fatia_fair/2018/IMG_2564.JPG', caption: `FATIA Fair 2018 Award Presentation` }
+    ],
+    2023: [
+      { url: '/assets/fatia_fair/2023/fair-2023-inauguration.jpg', caption: `FATIA Fair 2023 Lamp Lighting Inauguration` },
+      { url: '/assets/fatia_fair/2023/fair-2023-aerial-hall.jpg', caption: `FATIA Fair 2023 Trade Expo Hall` },
+      { url: '/assets/fatia_fair/2023/fair-2023-machinery-visit.jpg', caption: `FATIA Fair 2023 Industrial Machinery Pavilion` },
+      { url: '/assets/fatia_fair/2023/fair-2023-exhibition-stall.jpg', caption: `FATIA Fair 2023 Exhibition Stalls` }
+    ],
+    2025: [
+      { url: '/assets/fatia_fair/2025/fair-2025-inauguration.jpg', caption: `FATIA Fair 2025 Lamp Lighting Inauguration`, objectPosition: 'center top' },
+      { url: '/assets/fatia_fair/2025/fair-2025-helpdesk.jpg', caption: `FATIA Fair 2025 MSME & FaMeTN Help Desk`, objectPosition: 'center 38%' }
+    ],
+    2027: [
+      { url: '/assets/fatia_fair/2027/fatia-fair-2027-poster.jpg', caption: `FATIA Fair 2027 - 7th Edition Mega Industrial Trade Expo`, fitContain: true }
     ]
   };
 
@@ -162,6 +324,7 @@ export const getFairDataByYear = (year) => {
     boardMembers: boardMembers,
     committee: boardMembers,
     additionalCommittee: additionalCommittee,
+    committeeSections: committeeSections,
     members: rawMembers,
     gallery: fiveMoments,
     photos: fiveMoments

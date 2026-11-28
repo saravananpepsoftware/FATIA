@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { fairYears } from '../../data/fair';
+import { fairYears, getFairDropdownTitle } from '../../data/fair';
 import './MobileFairMenu.css';
 
 const MobileFairMenu = ({ onItemClick }) => {
@@ -38,7 +38,7 @@ const MobileFairMenu = ({ onItemClick }) => {
                 setIsOpen(false);
               }}
             >
-              {year}
+              {getFairDropdownTitle(year)}
             </NavLink>
           ))}
         </div>

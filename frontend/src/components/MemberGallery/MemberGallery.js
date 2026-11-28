@@ -160,7 +160,7 @@ const MemberGallery = ({ photos = [], title = 'Photo Highlights', year = '' }) =
             return (
               <div
                 key={idx}
-                className={`carousel-slide-luxury ${isActive ? 'active' : ''}`}
+                className={`carousel-slide-luxury ${isActive ? 'active' : ''} ${photo?.fitContain ? 'fit-contain' : ''}`}
                 aria-hidden={!isActive}
               >
                 {!isError ? (
@@ -168,6 +168,7 @@ const MemberGallery = ({ photos = [], title = 'Photo Highlights', year = '' }) =
                     src={photo.url}
                     alt={photo.caption || `Fair Photo ${idx + 1}`}
                     className="carousel-hero-image"
+                    style={photo?.objectPosition ? { objectPosition: photo.objectPosition } : undefined}
                     onError={() => handleImageError(idx)}
                   />
                 ) : (
@@ -182,7 +183,8 @@ const MemberGallery = ({ photos = [], title = 'Photo Highlights', year = '' }) =
                 )}
 
                 {/* Luxury Maroon & Gold Ribbon Wave Bottom Overlay */}
-                <div className="carousel-bottom-ribbon-overlay">
+                {!photo?.fitContain && (
+                  <div className="carousel-bottom-ribbon-overlay">
                   {/* SVG Ribbon Wave with Flowing Gold Curves */}
                   <svg
                     className="carousel-ribbon-wave-svg"
@@ -279,6 +281,7 @@ const MemberGallery = ({ photos = [], title = 'Photo Highlights', year = '' }) =
                     <div className="carousel-caption-underline" aria-hidden="true" />
                   </div>
                 </div>
+                )}
               </div>
             );
           })}

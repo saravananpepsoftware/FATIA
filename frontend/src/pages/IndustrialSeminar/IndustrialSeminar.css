@@ -1245,3 +1245,127 @@
   }
 }
 
+
+
+/* ==========================================================================
+   YEAR NAVIGATION PILL TABS (MATCHING FAIR PAGE PILLS)
+   ========================================================================== */
+
+.seminar-year-nav-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  max-width: 1120px;
+  margin: 0 auto 32px auto;
+  padding: 0 16px;
+}
+
+.seminar-year-nav-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 18px;
+  border-radius: 9999px;
+  background: #FFFFFF;
+  border: 1.5px solid #E5D4B3;
+  color: #4A1C24;
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(120, 14, 40, 0.05);
+}
+
+.seminar-year-nav-pill:hover {
+  background: #FFF9ED;
+  border-color: #C89B2B;
+  color: #700B1A;
+  transform: translateY(-1px);
+}
+
+.seminar-year-nav-pill.active {
+  background: linear-gradient(135deg, #700B1A 0%, #4D0612 100%);
+  color: #FFFFFF;
+  border-color: #8C1328;
+  box-shadow: 0 4px 14px rgba(77, 6, 18, 0.28);
+}
+
+.seminar-nav-cal-icon {
+  width: 15px;
+  height: 15px;
+  color: #C89B2B;
+  flex-shrink: 0;
+}
+
+.seminar-year-nav-pill.active .seminar-nav-cal-icon {
+  color: #F5D884;
+}
+
+.seminar-photo-placeholder {
+  width: 100%;
+  height: 100%;
+  min-height: 360px;
+  background: linear-gradient(135deg, #FAF4E8 0%, #F2E6D0 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #700B1A;
+  text-align: center;
+  padding: 24px;
+}
+
+.seminar-photo-placeholder svg {
+  width: 56px;
+  height: 56px;
+  color: #C89B2B;
+}
+
+.seminar-photo-placeholder span {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.seminar-photo-placeholder small {
+  font-size: 0.85rem;
+  color: #6B7280;
+}
+
+/* Sub-Tabs for Multiple Events per Year (Event 1, Event 2, Event 3) */
+.seminar-event-subtabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 0 auto 24px auto;
+  max-width: 1000px;
+}
+
+.seminar-event-subtab-btn {
+  padding: 7px 18px;
+  border-radius: 9999px;
+  background: #FFFDF8;
+  border: 1.5px solid #DFC58B;
+  color: #5C0917;
+  font-size: 0.84rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.seminar-event-subtab-btn:hover {
+  background: #FFF4DC;
+  border-color: #C89B2B;
+  transform: translateY(-1px);
+}
+
+.seminar-event-subtab-btn.active {
+  background: linear-gradient(135deg, #D4A738 0%, #B5822C 100%);
+  color: #FFFFFF;
+  border-color: #B5822C;
+  box-shadow: 0 3px 10px rgba(181, 130, 44, 0.3);
+}

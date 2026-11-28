@@ -203,7 +203,7 @@ const HeroOrbitSection = () => {
               </svg>
             </span>
             <span className="apex-badge-label">
-              APEX FEDERATION OF TRADE &amp; INDUSTRY ASSOCIATIONS
+              An Apex Body of 78 Associations
             </span>
           </div>
 
@@ -217,14 +217,18 @@ const HeroOrbitSection = () => {
             </h1>
           </div>
 
-          {/* Tamil Subheading */}
-          <h2 className="hero-tamil-heading">
-            ஈரோடு மாவட்ட அனைத்து தொழில் வணிக சங்கங்களின் கூட்டமைப்பு
-          </h2>
+          {/* Tamil Subheading with Vertical Gold Bar */}
+          <div className="hero-tamil-wrapper">
+            <div className="hero-gold-vertical-bar" aria-hidden="true" />
+            <h2 className="hero-tamil-heading">
+              ஈரோடு மாவட்ட அனைத்து தொழில் வணிக சங்கங்களின் கூட்டமைப்பு
+            </h2>
+          </div>
 
           {/* Descriptive Mission Statement */}
           <p className="hero-lead-text">
-            Unifying {totalMembers} regional trade and industry associations, representing thousands of
+            An Apex Body of {totalMembers} Regional trade and Industry associations (34 Industrial,
+            31 Manufacturer &amp; Trade and 13 Service Associations), representing thousands of
             business enterprises, manufacturers, dealers, and commercial partners across Erode
             District.
           </p>

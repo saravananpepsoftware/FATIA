@@ -182,11 +182,6 @@ export const boardData = {
       image: "/assets/committee_chairmen/N.Nagarajan, Public Relation Committee Chairman.jpg"
     },
     {
-      position: "Chairman - IT Wing",
-      name: "R. Manokar",
-      image: "/assets/committee_chairmen/manokar rmbf rooster sheet photo.JPG"
-    },
-    {
       position: "Chairman - Textile Development Committee",
       name: "R. Praveen Kumar",
       image: "/assets/committee_chairmen/R.Praveen Kumar, Textile Development Committee Chairman.jpeg"
@@ -200,6 +195,11 @@ export const boardData = {
       position: "Chairman - Taxation Committee",
       name: "Sekar @ K. Muthusamy",
       image: "/assets/committee_chairmen/Sekar@K.Muthusamy, Taxation Committee Chairman.jpg"
+    },
+    {
+      position: "Chairman - IT Wing",
+      name: "R. Manokar",
+      image: "/assets/committee_chairmen/manokar rmbf rooster sheet photo.JPG"
     }
   ],
   pastTerms: [

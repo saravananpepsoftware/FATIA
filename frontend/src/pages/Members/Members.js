@@ -7,15 +7,25 @@ import './Members.css';
 const Members = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
-  const filteredMembers = membersData.filter((member) => {
-    const term = searchTerm.toLowerCase();
-    return (
-      member.name.toLowerCase().includes(term) ||
-      (member.headTable?.president && member.headTable.president.toLowerCase().includes(term)) ||
-      (member.headTable?.secretary && member.headTable.secretary.toLowerCase().includes(term)) ||
-      (member.headTable?.treasurer && member.headTable.treasurer.toLowerCase().includes(term))
-    );
-  });
+  const filteredMembers = membersData
+    .filter((member) => {
+      const term = searchTerm.trim().toLowerCase();
+      if (!term) return true;
+
+      const nameStartsWith = member.name.trim().toLowerCase().startsWith(term);
+      if (term.length <= 2) {
+        return nameStartsWith;
+      }
+
+      return (
+        nameStartsWith ||
+        member.name.toLowerCase().includes(term) ||
+        (member.headTable?.president && member.headTable.president.toLowerCase().includes(term)) ||
+        (member.headTable?.secretary && member.headTable.secretary.toLowerCase().includes(term)) ||
+        (member.headTable?.treasurer && member.headTable.treasurer.toLowerCase().includes(term))
+      );
+    })
+    .sort((a, b) => a.name.trim().localeCompare(b.name.trim(), undefined, { sensitivity: 'base' }));
 
   return (
     <PageContainer>
@@ -29,11 +39,11 @@ const Members = () => {
         </div>
 
         <h1 className="members-page-title">
-          <span className="brand-red">FATIA</span> Member Associations
+          List of Members Association in <span className="brand-red">FATIA</span>
         </h1>
 
         <p className="members-page-subtitle">
-          Complete registry of all {membersData.length} member associations across Tamil Nadu districts with their respective Head Table office bearers.
+          Complete registry of all {membersData.length} member associations across Tamil Nadu with their respective Head Table office bearers.
         </p>
       </div>
 
